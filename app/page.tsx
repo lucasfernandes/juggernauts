@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
 import localFont from "next/font/local";
 import Link from "next/link";
+import { useState } from "react";
+import { Transition } from "@headlessui/react";
 
 // Font files can be colocated inside of `app`
 const pixeBoy = localFont({
@@ -25,6 +28,10 @@ const bettors = [
 ];
 
 export default function Home() {
+  const [fss, setFss] = useState(false);
+  const [sb, setSb] = useState(false);
+  const [ss, setSs] = useState(false);
+
   return (
     <main className="flex flex-col w-full max-w-[1920px]">
       {/* TOP BANNER */}
@@ -122,17 +129,35 @@ export default function Home() {
             FullSet Sports
           </p>
         </div>
-        <div className="flex flex-col  gap-16 text-white xl:pb-24">
-          <Link href="#" className="w-full h-[700px] relative">
+        <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[700px] max-h-[700px] bg-fss bg-bottom bg-cover">
+          <button className="w-full h-full" onMouseEnter={() => setFss(true)}>
             <Image
               src="/fss.png"
               placeholder="blur"
-              blurDataURL="/section-arrows.svg"
+              blurDataURL="/fss.png"
               alt="game modes"
               fill
               className="absolute w-full h-full"
             />
-          </Link>
+          </button>
+          <Transition
+            show={fss}
+            enter="transition-opacity duration-150"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity duration-150"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+            onMouseLeave={() => setFss(false)}
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-black to-amber-950/50 flex items-center justify-center">
+              <button
+                className={`transition-all bg-jugz w-[198px] h-[49px] flex justify-center items-center rounded-lg text-white text-[20px] font-medium hover:scale-[1.02] shadow-lg ${pixeBoy.className}`}
+              >
+                Learn more
+              </button>
+            </div>
+          </Transition>
         </div>
       </section>
 
@@ -145,22 +170,40 @@ export default function Home() {
             height={180}
             placeholder="blur"
             blurDataURL="/section-arrows.svg"
-            alt="game modes"
+            alt="arrow"
             className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8"
           />
-          <p className={`text-jugz pl-16 ${pixeBoy.className}`}>SocialBetz</p>
+          <p className={`text-jugz pl-16 ${pixeBoy.className}`}>Socialbetz</p>
         </div>
-        <div className="flex flex-col  gap-16 text-white xl:pb-24">
-          <Link href="#" className="w-full h-[700px] relative">
+        <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[700px] max-h-[700px] bg-fss bg-bottom bg-cover">
+          <button className="w-full h-full" onMouseEnter={() => setSb(true)}>
             <Image
               src="/sb.png"
               placeholder="blur"
               blurDataURL="/sb.png"
-              alt="game modes"
+              alt="SocialBetz"
               fill
               className="absolute w-full h-full"
             />
-          </Link>
+          </button>
+          <Transition
+            show={sb}
+            enter="transition-opacity duration-150"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity duration-150"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+            onMouseLeave={() => setSb(false)}
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-black to-amber-950/50 flex items-center justify-center">
+              <button
+                className={`transition-all bg-jugz w-[198px] h-[49px] flex justify-center items-center rounded-lg text-white text-[20px] font-medium hover:scale-[1.02] shadow-lg ${pixeBoy.className}`}
+              >
+                Learn more
+              </button>
+            </div>
+          </Transition>
         </div>
       </section>
 
@@ -173,25 +216,42 @@ export default function Home() {
             height={180}
             placeholder="blur"
             blurDataURL="/section-arrows.svg"
-            alt="game modes"
+            alt="arrow"
             className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8"
           />
-          <p className={`text-jugz pl-16 ${pixeBoy.className}`}>SportStuff</p>
+          <p className={`text-jugz pl-16 ${pixeBoy.className}`}>SPORTSTUF</p>
         </div>
-        <div className="flex flex-col  gap-16 text-white xl:pb-24">
-          <Link href="#" className="w-full h-[700px] relative">
+        <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[700px] max-h-[700px] bg-fss bg-bottom bg-cover">
+          <button className="w-full h-full" onMouseEnter={() => setSs(true)}>
             <Image
               src="/ss.png"
               placeholder="blur"
               blurDataURL="/ss.png"
-              alt="game modes"
+              alt="SportStuff"
               fill
               className="absolute w-full h-full"
             />
-          </Link>
+          </button>
+          <Transition
+            show={ss}
+            enter="transition-opacity duration-150"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="transition-opacity duration-150"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+            onMouseLeave={() => setSs(false)}
+          >
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-black to-amber-950/50 flex items-center justify-center">
+              <button
+                className={`transition-all bg-jugz w-[198px] h-[49px] flex justify-center items-center rounded-lg text-white text-[20px] font-medium hover:scale-[1.02] shadow-lg ${pixeBoy.className}`}
+              >
+                Learn more
+              </button>
+            </div>
+          </Transition>
         </div>
       </section>
-
       {/* PARTNERS */}
       <section className="bg-jugz4 bg-section bg-no-repeat bg-center">
         <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-gradient-to-r from-jugz/20 to-black shadow-inner relative">
