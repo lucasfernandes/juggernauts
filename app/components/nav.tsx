@@ -28,20 +28,20 @@ export default function Nav() {
         <div
           className={`flex items-center justify-between w-full py-[35px] md:px-[20px] xl:px-[100px] border-b border-jugz ${pixeBoy.className}`}
         >
-          <div className="min-w-[208px] max-w-[164px]">
-            <Link href="/" className="hover:opacity-75">
-              <Image
-                src="/logo.svg"
-                width={208}
-                height={164}
-                placeholder="blur"
-                blurDataURL="/logo.svg"
-                alt="logo"
-              />
-            </Link>
-          </div>
-          <div className="flex items-center justify-center w-full">
-            <div className="text-white flex items-center md:gap-6 xl:gap-10 font-light md:text-[16px] xl:text-[28px]">
+          <Link href="/" className="hover:opacity-75">
+            <Image
+              src="/logo-side-stance.svg"
+              width={368}
+              height={164}
+              placeholder="blur"
+              blurDataURL="/logo-side-stance.svg"
+              alt="logo"
+              className="pb-3"
+            />
+          </Link>
+
+          <div className="flex items-center justify-end w-full md:gap-6 xl:gap-10">
+            <div className="text-white flex items-center md:gap-6 xl:gap-10 font-light md:text-[16px] xl:text-[24px]">
               {routes.map((item, index) => (
                 <Link
                   key={index}
@@ -54,13 +54,12 @@ export default function Nav() {
                 </Link>
               ))}
             </div>
+            <button
+              className={`transition-all bg-jugz w-[198px] h-[49px] flex justify-center items-center rounded-lg text-white text-[20px] font-medium hover:scale-[1.02] ${pixeBoy.className}`}
+            >
+              Connect Wallet
+            </button>
           </div>
-
-          <button
-            className={`transition-all bg-jugz w-[198px] h-[49px] flex justify-center items-center rounded-lg text-white text-[20px] font-medium hover:scale-[1.02] ${pixeBoy.className}`}
-          >
-            Connect Wallet
-          </button>
         </div>
       </main>
       {/* MOBILE */}

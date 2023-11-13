@@ -1,5 +1,6 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import Link from "next/link";
 
 // Font files can be colocated inside of `app`
 const pixeBoy = localFont({
@@ -102,6 +103,92 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FULLSET SPORTS */}
+      <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative">
+          <Image
+            src="/section-arrows.svg"
+            width={180}
+            height={180}
+            placeholder="blur"
+            blurDataURL="/section-arrows.svg"
+            alt="game modes"
+            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8"
+          />
+          <p className={`text-jugz pl-16 ${pixeBoy.className}`}>
+            FullSet Sports
+          </p>
+        </div>
+        <div className="flex flex-col  gap-16 text-white xl:pb-24">
+          <Link href="#" className="w-full h-[700px] relative">
+            <Image
+              src="/fss.png"
+              placeholder="blur"
+              blurDataURL="/section-arrows.svg"
+              alt="game modes"
+              fill
+              className="absolute w-full h-full"
+            />
+          </Link>
+        </div>
+      </section>
+
+      {/* SOCIAL BETZ */}
+      <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative">
+          <Image
+            src="/section-arrows.svg"
+            width={180}
+            height={180}
+            placeholder="blur"
+            blurDataURL="/section-arrows.svg"
+            alt="game modes"
+            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8"
+          />
+          <p className={`text-jugz pl-16 ${pixeBoy.className}`}>SocialBetz</p>
+        </div>
+        <div className="flex flex-col  gap-16 text-white xl:pb-24">
+          <Link href="#" className="w-full h-[700px] relative">
+            <Image
+              src="/sb.png"
+              placeholder="blur"
+              blurDataURL="/sb.png"
+              alt="game modes"
+              fill
+              className="absolute w-full h-full"
+            />
+          </Link>
+        </div>
+      </section>
+
+      {/* SPORT STUFF */}
+      <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative">
+          <Image
+            src="/section-arrows.svg"
+            width={180}
+            height={180}
+            placeholder="blur"
+            blurDataURL="/section-arrows.svg"
+            alt="game modes"
+            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8"
+          />
+          <p className={`text-jugz pl-16 ${pixeBoy.className}`}>SportStuff</p>
+        </div>
+        <div className="flex flex-col  gap-16 text-white xl:pb-24">
+          <Link href="#" className="w-full h-[700px] relative">
+            <Image
+              src="/ss.png"
+              placeholder="blur"
+              blurDataURL="/ss.png"
+              alt="game modes"
+              fill
+              className="absolute w-full h-full"
+            />
+          </Link>
         </div>
       </section>
 
