@@ -1,113 +1,181 @@
-import Image from 'next/image'
+import Image from "next/image";
+import localFont from "next/font/local";
+
+// Font files can be colocated inside of `app`
+const pixeBoy = localFont({
+  src: "./Pixeboy.woff2",
+  display: "swap",
+});
+
+const prognosticators = [
+  "Create your SocialBetz Zone ",
+  "Post your sports bets, sports betting strategies, and related content ",
+  "Achieve a high betting win rate ",
+  "Gain a following",
+  "Earn crypto rewards",
+];
+
+const bettors = [
+  "Create a SocialBetz Account",
+  "Choose a SocialBetz Zone subscription level",
+  "Follow top Social Prognosticator's SocialBetz Zones",
+  "Copy bet top Social Prognosticators directly on site",
+  "Achieve an amazing sports betting win rate ",
+];
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex flex-col w-full max-w-[1920px]">
+      {/* TOP BANNER */}
+      <section className="flex flex-col py-16 gap-10 xl:gap-0">
+        <div className="flex justify-center sm:justify-start items-center xl:py-[70px] px-[26px] xl:px-[100px] gap-4 xl:gap-20">
+          <Image
+            src="/logo-head.svg"
+            width={118}
+            height={113}
+            placeholder="blur"
+            blurDataURL="/logo-head.svg"
+            alt="logo"
+            className="xl:hidden"
+          />
+          <Image
+            src="/logo-head.svg"
+            width={448}
+            height={443}
+            placeholder="blur"
+            blurDataURL="/logo-head.svg"
+            alt="logo"
+            className="hidden xl:block"
+          />
+
+          <div className="flex flex-col text-white z-10 max-w-[920px]">
+            <div className="flex flex-col gap-2 font-bold text-[50px] xl:text-[100px] leading-[46px] xl:leading-[110px]">
+              <p className={`text-jugz ${pixeBoy.className}`}>
+                JUGGERNAUTS <span className="text-white">SPORTS</span>
+              </p>
+              <p
+                className={`font-medium text-[26px] xl:text-[52px] leading-[35px] xl:leading-[60px] 2xl:leading-[65px]`}
+              >
+                Bringing Sports Fans into the Web3 world through innovative
+                SportFi dApps that are very{" "}
+                <span className="text-jugz">rewarding</span>, highly{" "}
+                <span className="text-jugz">intuitive</span>, and extremely{" "}
+                <span className="text-jugz">fun</span>.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+      {/* WHATS IS SPORTIFI */}
+      <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative">
+          <Image
+            src="/section-arrows.svg"
+            width={180}
+            height={180}
+            placeholder="blur"
+            blurDataURL="/section-arrows.svg"
+            alt="game modes"
+            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8"
+          />
+          <p className={`text-jugz pl-16 ${pixeBoy.className}`}>
+            What is SportFi?
           </p>
-        </a>
+        </div>
+        <div className="flex flex-col  gap-16 text-white xl:pb-24">
+          <div className="flex justify-between items-center xl:px-[100px] xl:mt-16 relative">
+            <div className="flex flex-col gap-10 w-full xl:max-w-[1000px] px-[22px] xl:px-0 pt-10 pb-10 z-10">
+              <p className={`text-[24px] xl:text-[34px] xl:leading-[46px]`}>
+                SportFi, a portmanteau of{" "}
+                <span className="text-jugz">Sport</span> and{" "}
+                <span className="text-jugz">Finance</span> is an amalgamation of
+                real word professional sports and finance that allows for the
+                creation of novel decentralized applications that are built
+                using blockchain technology.
+              </p>
+              <p className={`text-[24px] xl:text-[34px] xl:leading-[46px]`}>
+                With the integration of smart contracts, non fungible tokens,
+                and cryptocurrencies, Juggernauts will disrupt the ways in which
+                sports fans enjoy their favorite sports and engage with their
+                favorite athletes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      {/* PARTNERS */}
+      <section className="bg-jugz4 bg-section bg-no-repeat bg-center">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-gradient-to-r from-jugz/20 to-black shadow-inner relative">
+          <Image
+            src="/section-arrows.svg"
+            width={180}
+            height={180}
+            placeholder="blur"
+            blurDataURL="/section-arrows.svg"
+            alt="game modes"
+            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8"
+          />
+          <p className={`text-jugz pl-16 ${pixeBoy.className}`}>Our Team</p>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        <div className="hidden md:flex gap-24 items-center flex-wrap px-[26px] xl:px-[100px] xl:mt-16 relative py-24">
+          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz">
+            <Image
+              src="/logo-head.svg"
+              width={200}
+              height={339}
+              placeholder="blur"
+              blurDataURL="/logo-head.svg"
+              alt="social betz"
+              className="drop-shadow-xl"
+            />
+            <p className={`text-3xl text-white ${pixeBoy.className}`}>Name</p>
+            <p className="font-bold">Label</p>
+          </div>
+          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz">
+            <Image
+              src="/logo-head.svg"
+              width={200}
+              height={339}
+              placeholder="blur"
+              blurDataURL="/logo-head.svg"
+              alt="social betz"
+              className="drop-shadow-xl"
+            />
+            <p className={`text-3xl text-white ${pixeBoy.className}`}>Name</p>
+            <p className="font-bold">Label</p>
+          </div>
+          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz">
+            <Image
+              src="/logo-head.svg"
+              width={200}
+              height={339}
+              placeholder="blur"
+              blurDataURL="/logo-head.svg"
+              alt="social betz"
+              className="drop-shadow-xl"
+            />
+            <p className={`text-3xl text-white ${pixeBoy.className}`}>Name</p>
+            <p className="font-bold">Label</p>
+          </div>
+        </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <div className="flex md:hidden flex-col items-center justify-center gap-10 py-10">
+          <div className="p-4 bg-white">
+            <Image
+              src="/logo-head.svg"
+              width={200}
+              height={339}
+              placeholder="blur"
+              blurDataURL="/logo-head.svg"
+              alt="social betz"
+              className="drop-shadow-xl"
+            />
+          </div>
+        </div>
+      </section>
     </main>
-  )
+  );
 }
