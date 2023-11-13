@@ -24,7 +24,7 @@ export default function Nav() {
   return (
     <>
       {/* DESKTOP */}
-      <main className="hidden lg:flex w-full max-w-[1920px] bg-black">
+      <main id="top" className="hidden lg:flex w-full max-w-[1920px] bg-black">
         <div
           className={`flex items-center justify-between w-full py-[35px] md:px-[20px] xl:px-[100px] border-b border-jugz ${pixeBoy.className}`}
         >

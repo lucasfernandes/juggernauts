@@ -33,7 +33,7 @@ export default function Home() {
   const [ss, setSs] = useState(false);
 
   return (
-    <main className="flex flex-col w-full max-w-[1920px]">
+    <main id="main" className="flex flex-col w-full max-w-[1920px] relative">
       {/* TOP BANNER */}
       <section className="flex flex-col py-16 gap-10 xl:gap-0">
         <div className="flex justify-center sm:justify-start items-center xl:py-[70px] px-[26px] xl:px-[100px] gap-4 xl:gap-20">
@@ -53,7 +53,7 @@ export default function Home() {
             placeholder="blur"
             blurDataURL="/logo-head.svg"
             alt="logo"
-            className="hidden xl:block"
+            className="hidden xl:block transition-all hover:scale-[1.03] hover:-rotate-[360deg]"
           />
 
           <div className="flex flex-col text-white z-10 max-w-[920px]">
@@ -76,8 +76,11 @@ export default function Home() {
       </section>
 
       {/* WHATS IS SPORTIFI */}
-      <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative">
+      <section
+        id="sportifi"
+        className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center"
+      >
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative  transition-all hover:pl-20">
           <Image
             src="/section-arrows.svg"
             width={180}
@@ -114,8 +117,11 @@ export default function Home() {
       </section>
 
       {/* FULLSET SPORTS */}
-      <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative">
+      <section
+        id="ecosystem"
+        className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center"
+      >
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative transition-all hover:pl-20">
           <Image
             src="/section-arrows.svg"
             width={180}
@@ -165,7 +171,7 @@ export default function Home() {
 
       {/* SOCIAL BETZ */}
       <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative transition-all hover:pl-20">
           <Image
             src="/section-arrows.svg"
             width={180}
@@ -212,8 +218,8 @@ export default function Home() {
       </section>
 
       {/* SPORT STUFF */}
-      <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative">
+      <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center z-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative transition-all hover:pl-20">
           <Image
             src="/section-arrows.svg"
             width={180}
@@ -257,9 +263,65 @@ export default function Home() {
           </Transition>
         </div>
       </section>
-      {/* PARTNERS */}
-      <section className="bg-jugz4 bg-section bg-no-repeat bg-center">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-gradient-to-r from-jugz/20 to-black shadow-inner relative">
+
+      {/* JUGZ TOKEN */}
+      <section
+        id="jugz"
+        className="bg-black bg-jugz5 xl:bg-numbers bg-no-repeat bg-center"
+      >
+        <div className="flex flex-col  gap-16 text-white xl:pb-24">
+          <div className="flex justify-between items-center xl:px-[100px] xl:mt-16 relative">
+            <div className="flex flex-col gap-14 w-full xl:max-w-[1000px] px-[22px] xl:px-0 pt-10 pb-10 z-10">
+              <p
+                className={`text-[24px] xl:text-[134px] xl:leading-[46px] ${pixeBoy.className}`}
+              >
+                $JUGZ TOKEN
+              </p>
+              <p
+                className={`text-[24px] xl:text-[34px] xl:leading-[46px] max-w-[800px]`}
+              >
+                The $JUGZ token is the medium of exchange for all products and
+                services within the juggernauts SportFi ecosystem.
+              </p>
+            </div>
+            <Image
+              src="/coins.svg"
+              width={180}
+              height={180}
+              placeholder="blur"
+              blurDataURL="/coins.svg"
+              alt="coins"
+              className="w-[40px] xl:w-[680px] absolute right-0 top-[-130px] z-0 transition-all hover:scale-[1.03] hover:right-10 duration-300"
+            />
+          </div>
+          <div className="flex items-center gap-16 xl:px-[100px]">
+            <div className="flex flex-col bg-black/70 border border-jugz rounded-[8px] p-5 text-center min-w-[300px] max-w-[300px] transition-all hover:scale-[1.03]">
+              <p className={`text-6xl text-white ${pixeBoy.className}`}>
+                1B $JUGZ
+              </p>
+              <p className="text-[16px] text-jugz">Total Supply</p>
+            </div>
+            <div className="flex flex-col bg-black/70 border border-jugz rounded-[8px] p-5 text-center min-w-[300px] max-w-[300px] transition-all hover:scale-[1.03]">
+              <p className={`text-6xl text-white ${pixeBoy.className}`}>
+                $15M USD
+              </p>
+              <p className="text-[16px] text-jugz">Fully-dilluted Valuation</p>
+            </div>
+            <div className="flex flex-col bg-black/70 border border-jugz rounded-[8px] p-5 text-center min-w-[300px] max-w-[300px] transition-all hover:scale-[1.03]">
+              <p className={`text-6xl text-white ${pixeBoy.className}`}>
+                $450K USD
+              </p>
+              <p className="text-[16px] text-jugz">
+                Circulating market cap at TGE
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TEAM */}
+      <section id="team" className="bg-jugz4 bg-section bg-no-repeat bg-center">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-gradient-to-r from-jugz/20 to-black shadow-inner relative transition-all hover:pl-20">
           <Image
             src="/section-arrows.svg"
             width={180}
@@ -328,6 +390,30 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* BUTTON TO TOP */}
+      <Link
+        href="#top"
+        className="fixed bottom-24 right-24 bg-black/90 p-2 rounded-lg text-jugz/90 z-30 transition-all hover:scale-[1.03] hover:text-jugz"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="48"
+          height="48"
+          fill="currentColor"
+          className="bi bi-chevron-double-up"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"
+          />
+        </svg>
+      </Link>
     </main>
   );
 }

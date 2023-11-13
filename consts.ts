@@ -6,19 +6,19 @@ export const routes: { title: string; href: string }[] = [
   },
   {
     title: "SportFi",
-    href: "#",
+    href: "/#sportifi",
   },
   {
     title: "Ecosystem",
-    href: "#",
+    href: "/#ecosystem",
   },
   {
     title: "$JUGZ",
-    href: "#",
+    href: "/#jugz",
   },
   {
     title: "Team",
-    href: "#",
+    href: "/#team",
   },
   {
     title: "Whitepaper",

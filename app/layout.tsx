@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body>
         <div className="flex flex-col items-center bg-jugz1 bg-no-repeat bg-top">
           <StateProvider>
