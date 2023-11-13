@@ -151,11 +151,13 @@ export default function Home() {
             onMouseLeave={() => setFss(false)}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-black to-amber-950/50 flex items-center justify-center">
-              <button
+              <Link
+                href="https://fullset-sports.vercel.app/"
+                target="blank"
                 className={`transition-all bg-jugz w-[198px] h-[49px] flex justify-center items-center rounded-lg text-white text-[20px] font-medium hover:scale-[1.02] shadow-lg ${pixeBoy.className}`}
               >
                 Learn more
-              </button>
+              </Link>
             </div>
           </Transition>
         </div>
@@ -197,11 +199,13 @@ export default function Home() {
             onMouseLeave={() => setSb(false)}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-black to-amber-950/50 flex items-center justify-center">
-              <button
+              <Link
+                href="https://socialbetz.vercel.app/"
+                target="blank"
                 className={`transition-all bg-jugz w-[198px] h-[49px] flex justify-center items-center rounded-lg text-white text-[20px] font-medium hover:scale-[1.02] shadow-lg ${pixeBoy.className}`}
               >
                 Learn more
-              </button>
+              </Link>
             </div>
           </Transition>
         </div>
@@ -243,11 +247,12 @@ export default function Home() {
             onMouseLeave={() => setSs(false)}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-black to-amber-950/50 flex items-center justify-center">
-              <button
+              <Link
+                href="#"
                 className={`transition-all bg-jugz w-[198px] h-[49px] flex justify-center items-center rounded-lg text-white text-[20px] font-medium hover:scale-[1.02] shadow-lg ${pixeBoy.className}`}
               >
                 Learn more
-              </button>
+              </Link>
             </div>
           </Transition>
         </div>
