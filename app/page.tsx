@@ -321,7 +321,7 @@ export default function Home() {
 
       {/* TEAM */}
       <section id="team" className="bg-jugz4 bg-section bg-no-repeat bg-center">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-gradient-to-r from-jugz/20 to-black shadow-inner relative transition-all hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px] px-[26px] xl:px-[100px] py-16 bg-gradient-to-r from-jugz/20 to-black shadow-inner relative transition-all hover:pl-20">
           <Image
             src="/section-arrows.svg"
             width={180}
@@ -335,7 +335,7 @@ export default function Home() {
         </div>
 
         <div className="hidden md:flex gap-24 items-center flex-wrap px-[26px] xl:px-[100px] xl:mt-16 relative py-24">
-          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz">
+          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-full hover:bg-jugz delay-150">
             <Image
               src="/logo-head.svg"
               width={200}
@@ -348,7 +348,7 @@ export default function Home() {
             <p className={`text-3xl text-white ${pixeBoy.className}`}>Name</p>
             <p className="font-bold">Label</p>
           </div>
-          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz">
+          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-full hover:bg-jugz delay-150">
             <Image
               src="/logo-head.svg"
               width={200}
@@ -361,7 +361,7 @@ export default function Home() {
             <p className={`text-3xl text-white ${pixeBoy.className}`}>Name</p>
             <p className="font-bold">Label</p>
           </div>
-          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz">
+          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-full hover:bg-jugz delay-150">
             <Image
               src="/logo-head.svg"
               width={200}
@@ -405,11 +405,11 @@ export default function Home() {
           viewBox="0 0 16 16"
         >
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"
           />
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"
           />
         </svg>
