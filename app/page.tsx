@@ -57,11 +57,11 @@ export default function Home() {
           />
 
           <div className="flex flex-col text-white z-10 max-w-[920px]">
-            <div className="flex flex-col gap-2 font-bold text-[50px] xl:text-[100px] leading-[46px] xl:leading-[110px]">
+            <div className="flex flex-col gap-2 font-bold text-[50px] xl:text-[140px] leading-[46px] xl:leading-[110px]">
               <p
                 className={`text-white drop-shadow-black  ${pixeBoy.className}`}
               >
-                JUGGERNAUTS SPORTS
+                JUGGERNAUTS
               </p>
               <p
                 className={`font-medium text-[26px] xl:text-[32px] leading-[35px] xl:leading-[40px] 2xl:leading-[45px] text-jugz-light drop-shadow-black`}
