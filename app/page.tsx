@@ -58,17 +58,19 @@ export default function Home() {
 
           <div className="flex flex-col text-white z-10 max-w-[920px]">
             <div className="flex flex-col gap-2 font-bold text-[50px] xl:text-[100px] leading-[46px] xl:leading-[110px]">
-              <p className={`text-jugz ${pixeBoy.className}`}>
-                JUGGERNAUTS <span className="text-white">SPORTS</span>
+              <p
+                className={`text-white drop-shadow-black  ${pixeBoy.className}`}
+              >
+                JUGGERNAUTS SPORTS
               </p>
               <p
-                className={`font-medium text-[26px] xl:text-[52px] leading-[35px] xl:leading-[60px] 2xl:leading-[65px]`}
+                className={`font-medium text-[26px] xl:text-[52px] leading-[35px] xl:leading-[60px] 2xl:leading-[65px] text-jugz-light drop-shadow-black`}
               >
                 Bringing Sports Fans into the Web3 world through innovative
                 SportFi dApps that are very{" "}
-                <span className="text-jugz">rewarding</span>, highly{" "}
-                <span className="text-jugz">intuitive</span>, and extremely{" "}
-                <span className="text-jugz">fun</span>.
+                <span className="text-jugz-light">rewarding</span>, highly{" "}
+                <span className="text-jugz-light">intuitive</span>, and
+                extremely <span className="text-jugz-light">fun</span>.
               </p>
             </div>
           </div>
@@ -80,7 +82,7 @@ export default function Home() {
         id="sportifi"
         className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center"
       >
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative  transition-all hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-jugz-light shadow-inner relative  transition-all hover:pl-20">
           <Image
             src="/section-arrows.svg"
             width={180}
@@ -88,20 +90,22 @@ export default function Home() {
             placeholder="blur"
             blurDataURL="/section-arrows.svg"
             alt="game modes"
-            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8"
+            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8 drop-shadow-black"
           />
-          <p className={`text-jugz pl-16 ${pixeBoy.className}`}>
+          <p
+            className={`text-jugz pl-16 drop-shadow-black ${pixeBoy.className}`}
+          >
             What is SportFi?
           </p>
         </div>
-        <div className="flex flex-col  gap-16 text-white xl:pb-24">
+        <div className="flex flex-col  gap-16 text-jugz-light xl:pb-24">
           <div className="flex justify-between items-center xl:px-[100px] xl:mt-16 relative">
-            <div className="flex flex-col gap-10 w-full xl:max-w-[1000px] px-[22px] xl:px-0 pt-10 pb-10 z-10">
+            <div className="flex flex-col gap-10 w-full xl:max-w-[1000px] px-[22px] xl:px-0 pt-10 pb-10 z-10 drop-shadow-black">
               <p className={`text-[24px] xl:text-[34px] xl:leading-[46px]`}>
                 SportFi, a portmanteau of{" "}
-                <span className="text-jugz">Sport</span> and{" "}
-                <span className="text-jugz">Finance</span> is an amalgamation of
-                real word professional sports and finance that allows for the
+                <span className="text-white">Sport</span> and{" "}
+                <span className="text-white">Finance</span> is an amalgamation
+                of real word professional sports and finance that allows for the
                 creation of novel decentralized applications that are built
                 using blockchain technology.
               </p>
@@ -121,17 +125,19 @@ export default function Home() {
         id="ecosystem"
         className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center"
       >
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative transition-all hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-jugz shadow-inner relative transition-all hover:pl-20">
           <Image
-            src="/section-arrows.svg"
+            src="/section-arrows-light.svg"
             width={180}
             height={180}
             placeholder="blur"
             blurDataURL="/section-arrows.svg"
             alt="game modes"
-            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8"
+            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8 drop-shadow-black"
           />
-          <p className={`text-jugz pl-16 ${pixeBoy.className}`}>
+          <p
+            className={`text-white pl-16 drop-shadow-black ${pixeBoy.className}`}
+          >
             FullSet Sports
           </p>
         </div>
@@ -156,11 +162,11 @@ export default function Home() {
             leaveTo="opacity-0"
             onMouseLeave={() => setFss(false)}
           >
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-black to-amber-950/50 flex items-center justify-center">
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-jugz/80 to-black/40 flex items-center justify-center">
               <Link
                 href="https://fullset-sports.vercel.app/"
                 target="blank"
-                className={`transition-all bg-jugz w-[198px] h-[49px] flex justify-center items-center rounded-lg text-white text-[20px] font-medium hover:scale-[1.02] shadow-lg ${pixeBoy.className}`}
+                className={`transition-all bg-white border border-blue-400 w-[198px] h-[49px] flex justify-center items-center rounded-lg text-jugz text-[20px] font-medium hover:scale-[1.02] hover:drop-shadow-light ${pixeBoy.className}`}
               >
                 Learn more
               </Link>
@@ -171,17 +177,21 @@ export default function Home() {
 
       {/* SOCIAL BETZ */}
       <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative transition-all hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-jugz shadow-inner relative transition-all hover:pl-20">
           <Image
-            src="/section-arrows.svg"
+            src="/section-arrows-light.svg"
             width={180}
             height={180}
             placeholder="blur"
             blurDataURL="/section-arrows.svg"
             alt="arrow"
-            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8"
+            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8 drop-shadow-black"
           />
-          <p className={`text-jugz pl-16 ${pixeBoy.className}`}>Socialbetz</p>
+          <p
+            className={`text-white pl-16 drop-shadow-black ${pixeBoy.className}`}
+          >
+            Socialbetz
+          </p>
         </div>
         <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[700px] max-h-[700px] bg-fss bg-bottom bg-cover">
           <button className="w-full h-full" onMouseEnter={() => setSb(true)}>
@@ -204,11 +214,11 @@ export default function Home() {
             leaveTo="opacity-0"
             onMouseLeave={() => setSb(false)}
           >
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-black to-amber-950/50 flex items-center justify-center">
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-jugz/80 to-black/40 flex items-center justify-center">
               <Link
                 href="https://socialbetz.vercel.app/"
                 target="blank"
-                className={`transition-all bg-jugz w-[198px] h-[49px] flex justify-center items-center rounded-lg text-white text-[20px] font-medium hover:scale-[1.02] shadow-lg ${pixeBoy.className}`}
+                className={`transition-all bg-white border border-blue-400 w-[198px] h-[49px] flex justify-center items-center rounded-lg text-jugz text-[20px] font-medium hover:scale-[1.02] hover:drop-shadow-light ${pixeBoy.className}`}
               >
                 Learn more
               </Link>
@@ -219,17 +229,21 @@ export default function Home() {
 
       {/* SPORT STUFF */}
       <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center z-20">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-black/60 shadow-inner relative transition-all hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-jugz shadow-inner relative transition-all hover:pl-20">
           <Image
-            src="/section-arrows.svg"
+            src="/section-arrows-light.svg"
             width={180}
             height={180}
             placeholder="blur"
             blurDataURL="/section-arrows.svg"
             alt="arrow"
-            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8"
+            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8 drop-shadow-black"
           />
-          <p className={`text-jugz pl-16 ${pixeBoy.className}`}>SPORTSTUF</p>
+          <p
+            className={`text-white pl-16 drop-shadow-black ${pixeBoy.className}`}
+          >
+            SPORTSTUF
+          </p>
         </div>
         <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[700px] max-h-[700px] bg-fss bg-bottom bg-cover">
           <button className="w-full h-full" onMouseEnter={() => setSs(true)}>
@@ -252,10 +266,10 @@ export default function Home() {
             leaveTo="opacity-0"
             onMouseLeave={() => setSs(false)}
           >
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-black to-amber-950/50 flex items-center justify-center">
+            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-jugz/80 to-black/40 flex items-center justify-center">
               <Link
                 href="#"
-                className={`transition-all bg-jugz w-[198px] h-[49px] flex justify-center items-center rounded-lg text-white text-[20px] font-medium hover:scale-[1.02] shadow-lg ${pixeBoy.className}`}
+                className={`transition-all bg-white border border-blue-400 w-[198px] h-[49px] flex justify-center items-center rounded-lg text-jugz text-[20px] font-medium hover:scale-[1.02] hover:drop-shadow-light ${pixeBoy.className}`}
               >
                 Learn more
               </Link>
@@ -273,12 +287,12 @@ export default function Home() {
           <div className="flex justify-between items-center xl:px-[100px] xl:mt-16 relative">
             <div className="flex flex-col gap-14 w-full xl:max-w-[1000px] px-[22px] xl:px-0 pt-10 pb-10 z-10">
               <p
-                className={`text-[24px] xl:text-[134px] xl:leading-[46px] ${pixeBoy.className}`}
+                className={`text-[24px] xl:text-[134px] xl:leading-[46px]  drop-shadow-black ${pixeBoy.className}`}
               >
                 $JUGZ TOKEN
               </p>
               <p
-                className={`text-[24px] xl:text-[34px] xl:leading-[46px] max-w-[800px]`}
+                className={`text-[24px] xl:text-[34px] xl:leading-[46px] max-w-[800px] text-jugz-light drop-shadow-black`}
               >
                 The $JUGZ token is the medium of exchange for all products and
                 services within the juggernauts SportFi ecosystem.
@@ -295,23 +309,25 @@ export default function Home() {
             />
           </div>
           <div className="flex items-center gap-16 xl:px-[100px]">
-            <div className="flex flex-col bg-black/70 border border-jugz rounded-[8px] p-5 text-center min-w-[300px] max-w-[300px] transition-all hover:scale-[1.03]">
+            <div className="flex flex-col bg-black/70 border border-jugz-light rounded-[8px] p-5 text-center min-w-[300px] max-w-[300px] transition-all hover:scale-[1.03] hover:drop-shadow-light">
               <p className={`text-6xl text-white ${pixeBoy.className}`}>
                 1B $JUGZ
               </p>
-              <p className="text-[16px] text-jugz">Total Supply</p>
+              <p className="text-[16px] text-jugz-light">Total Supply</p>
             </div>
-            <div className="flex flex-col bg-black/70 border border-jugz rounded-[8px] p-5 text-center min-w-[300px] max-w-[300px] transition-all hover:scale-[1.03]">
+            <div className="flex flex-col bg-black/70 border border-jugz-light rounded-[8px] p-5 text-center min-w-[300px] max-w-[300px] transition-all hover:scale-[1.03] hover:drop-shadow-light">
               <p className={`text-6xl text-white ${pixeBoy.className}`}>
                 $15M USD
               </p>
-              <p className="text-[16px] text-jugz">Fully-dilluted Valuation</p>
+              <p className="text-[16px] text-jugz-light">
+                Fully-dilluted Valuation
+              </p>
             </div>
-            <div className="flex flex-col bg-black/70 border border-jugz rounded-[8px] p-5 text-center min-w-[300px] max-w-[300px] transition-all hover:scale-[1.03]">
+            <div className="flex flex-col bg-black/70 border border-jugz-light rounded-[8px] p-5 text-center min-w-[300px] max-w-[300px] transition-all hover:scale-[1.03] hover:drop-shadow-light">
               <p className={`text-6xl text-white ${pixeBoy.className}`}>
                 $450K USD
               </p>
-              <p className="text-[16px] text-jugz">
+              <p className="text-[16px] text-jugz-light">
                 Circulating market cap at TGE
               </p>
             </div>
@@ -321,7 +337,7 @@ export default function Home() {
 
       {/* TEAM */}
       <section id="team" className="bg-jugz4 bg-section bg-no-repeat bg-center">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px] px-[26px] xl:px-[100px] py-16 bg-gradient-to-r from-jugz/20 to-black shadow-inner relative transition-all hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px] px-[26px] xl:px-[100px] py-16 bg-jugz-light shadow-inner relative transition-all hover:pl-20">
           <Image
             src="/section-arrows.svg"
             width={180}
@@ -329,13 +345,17 @@ export default function Home() {
             placeholder="blur"
             blurDataURL="/section-arrows.svg"
             alt="game modes"
-            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8"
+            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8 drop-shadow-black"
           />
-          <p className={`text-jugz pl-16 ${pixeBoy.className}`}>Our Team</p>
+          <p
+            className={`text-jugz pl-16 drop-shadow-black ${pixeBoy.className}`}
+          >
+            Our Team
+          </p>
         </div>
 
         <div className="hidden md:flex gap-24 items-center flex-wrap px-[26px] xl:px-[100px] xl:mt-16 relative py-24">
-          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz">
+          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz hover:drop-shadow-light">
             <Image
               src="/logo-head.svg"
               width={200}
@@ -345,10 +365,14 @@ export default function Home() {
               alt="social betz"
               className="drop-shadow-xl"
             />
-            <p className={`text-3xl text-white ${pixeBoy.className}`}>Name</p>
-            <p className="font-bold">Label</p>
+            <p
+              className={`text-3xl text-white drop-shadow-black ${pixeBoy.className}`}
+            >
+              Name
+            </p>
+            <p className="font-bold text-jugz-light">Label</p>
           </div>
-          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz">
+          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz hover:drop-shadow-light">
             <Image
               src="/logo-head.svg"
               width={200}
@@ -358,10 +382,14 @@ export default function Home() {
               alt="social betz"
               className="drop-shadow-xl"
             />
-            <p className={`text-3xl text-white ${pixeBoy.className}`}>Name</p>
-            <p className="font-bold">Label</p>
+            <p
+              className={`text-3xl text-white drop-shadow-black ${pixeBoy.className}`}
+            >
+              Name
+            </p>
+            <p className="font-bold text-jugz-light">Label</p>
           </div>
-          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz">
+          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz hover:drop-shadow-light">
             <Image
               src="/logo-head.svg"
               width={200}
@@ -371,8 +399,12 @@ export default function Home() {
               alt="social betz"
               className="drop-shadow-xl"
             />
-            <p className={`text-3xl text-white ${pixeBoy.className}`}>Name</p>
-            <p className="font-bold">Label</p>
+            <p
+              className={`text-3xl text-white drop-shadow-black ${pixeBoy.className}`}
+            >
+              Name
+            </p>
+            <p className="font-bold text-jugz-light">Label</p>
           </div>
         </div>
 
@@ -394,7 +426,7 @@ export default function Home() {
       {/* BUTTON TO TOP */}
       <Link
         href="#top"
-        className="fixed bottom-24 right-24 bg-black/90 p-2 rounded-lg text-jugz/90 z-30 transition-all hover:scale-[1.03] hover:text-jugz"
+        className="fixed bottom-24 right-24 bg-jugz/60 p-2 rounded-lg text-jugz-light z-30 transition-all hover:scale-[1.03] hover:text-white shadow-md"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

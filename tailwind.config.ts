@@ -9,7 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        jugz: "#FB771D",
+        jugz: "#3354C5",
+        "jugz-light": "#C9DAF8",
+      },
+      dropShadow: {
+        black: "2px 5px 0px rgba(0, 0, 0, 1)",
+        light: "5px 5px 15px rgba(201, 218, 248, 0.3)",
       },
       backgroundImage: {
         jugz1: "url('/backgrounds/1.png')",

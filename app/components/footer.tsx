@@ -14,7 +14,7 @@ export default function Footer() {
       className={`flex flex-col pt-[70px] xl:pt-[100px] pb-[60px] px-[26px] lg:px-[52px] justify-center items-center w-full bg-purple-betz max-w-[1920px] shadow-inner ${pixeBoy.className}`}
     >
       <div className="flex flex-col w-full max-w-[1920px] gap-4">
-        <div className="flex flex-row justify-between items-center border-b border-white/20 pb-[20px] w-full px-[10px] text-white text-sm xl:text-xl">
+        <div className="flex flex-row justify-between items-center border-b border-jugz-light/50 pb-[20px] w-full px-[10px] text-jugz-light text-sm xl:text-xl">
           <div className="flex flex-row items-center gap-5">
             {routes
               .filter((_, filterIndex) => filterIndex <= 2)
@@ -28,9 +28,11 @@ export default function Footer() {
                 </Link>
               ))}
           </div>
-          <Link href="mailto:hello@juggernauts.io">hello@juggernauts.io</Link>
+          <Link href="mailto:hello@juggernauts.io" className="hover:opacity-75">
+            hello@juggernauts.io
+          </Link>
         </div>
-        <div className="flex flex-row justify-between items-center w-full px-[10px] text-white">
+        <div className="flex flex-row justify-between items-center w-full px-[10px] text-jugz-light">
           <div className="flex flex-row items-center gap-5 text-sm xl:text-xl">
             {routes
               .filter((_, filterIndex) => filterIndex > 2)
@@ -128,12 +130,12 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-col xl:flex-row justify-between items-center w-full px-[10px] mt-[50px] xl:mt-[100px] text-[14px]">
-          <span className={`text-white tracking-[3px]`}>
+          <span className={`text-jugz-light tracking-[3px]`}>
             2023 © Juggernauts
           </span>
           <Link
             href="/"
-            className="text-white border-b border-white hover:opacity-75"
+            className="text-jugz-light border-b border-jugz-light hover:opacity-75"
           >
             Legal Disclaimer
           </Link>
