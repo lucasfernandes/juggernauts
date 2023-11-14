@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <main id="main" className="flex flex-col w-full max-w-[1920px] relative">
       {/* TOP BANNER */}
-      <section className="flex flex-col py-16 gap-10 xl:gap-0">
+      <section className="flex flex-col py-16 gap-10 xl:gap-0 relative">
         <div className="flex justify-center sm:justify-start items-center xl:py-[70px] px-[26px] xl:px-[100px] gap-4 xl:gap-20">
           <Image
             src="/logo-head.svg"
@@ -44,7 +44,7 @@ export default function Home() {
             placeholder="blur"
             blurDataURL="/logo-head.svg"
             alt="logo"
-            className="xl:hidden"
+            className="xl:hidden absolute bottom-0 right-0"
           />
           <Image
             src="/logo-head.svg"
@@ -53,7 +53,7 @@ export default function Home() {
             placeholder="blur"
             blurDataURL="/logo-head.svg"
             alt="logo"
-            className="hidden xl:block transition-all hover:scale-[1.03] hover:-rotate-[360deg]"
+            className="hidden xl:block xl:w-[288px] 2xl:w-[448px] transition-all hover:scale-[1.03] hover:-rotate-[360deg]"
           />
 
           <div className="flex flex-col text-white z-10 max-w-[920px]">
@@ -82,7 +82,7 @@ export default function Home() {
         id="sportifi"
         className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center"
       >
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20">
           <Image
             src="/section-arrows-light.svg"
             width={180}
@@ -90,7 +90,7 @@ export default function Home() {
             placeholder="blur"
             blurDataURL="/section-arrows.svg"
             alt="game modes"
-            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8 drop-shadow-black"
+            className="w-[100px] xl:w-[180px] absolute left-[-40px] xl:left-[-50px] top-6 xl:top-8 drop-shadow-black"
           />
           <p
             className={`text-white pl-16 drop-shadow-black ${pixeBoy.className}`}
@@ -125,7 +125,7 @@ export default function Home() {
         id="ecosystem"
         className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center"
       >
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20">
           <Image
             src="/section-arrows-light.svg"
             width={180}
@@ -133,7 +133,7 @@ export default function Home() {
             placeholder="blur"
             blurDataURL="/section-arrows.svg"
             alt="game modes"
-            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8 drop-shadow-black"
+            className="w-[100px] xl:w-[180px] absolute left-[-40px] xl:left-[-50px] top-6 xl:top-8 drop-shadow-black"
           />
           <p
             className={`text-white pl-16 drop-shadow-black ${pixeBoy.className}`}
@@ -141,7 +141,7 @@ export default function Home() {
             FullSet Sports
           </p>
         </div>
-        <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[700px] max-h-[700px] bg-fss bg-bottom bg-cover">
+        <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] xl:h-[700px] xl:max-h-[700px] bg-fss bg-bottom bg-cover">
           <button className="w-full h-full" onMouseEnter={() => setFss(true)}>
             <Image
               src="/fss.png"
@@ -177,7 +177,7 @@ export default function Home() {
 
       {/* SOCIAL BETZ */}
       <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20">
           <Image
             src="/section-arrows-light.svg"
             width={180}
@@ -185,7 +185,7 @@ export default function Home() {
             placeholder="blur"
             blurDataURL="/section-arrows.svg"
             alt="arrow"
-            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8 drop-shadow-black"
+            className="w-[100px] xl:w-[180px] absolute left-[-40px] xl:left-[-50px] top-6 xl:top-8 drop-shadow-black"
           />
           <p
             className={`text-white pl-16 drop-shadow-black ${pixeBoy.className}`}
@@ -193,7 +193,7 @@ export default function Home() {
             Socialbetz
           </p>
         </div>
-        <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[700px] max-h-[700px] bg-fss bg-bottom bg-cover">
+        <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] xl:h-[700px] xl:max-h-[700px] bg-fss bg-bottom bg-cover">
           <button className="w-full h-full" onMouseEnter={() => setSb(true)}>
             <Image
               src="/sb.png"
@@ -229,7 +229,7 @@ export default function Home() {
 
       {/* SPORT STUFF */}
       <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center z-20">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20">
           <Image
             src="/section-arrows-light.svg"
             width={180}
@@ -237,7 +237,7 @@ export default function Home() {
             placeholder="blur"
             blurDataURL="/section-arrows.svg"
             alt="arrow"
-            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8 drop-shadow-black"
+            className="w-[100px] xl:w-[180px] absolute left-[-40px] xl:left-[-50px] top-6 xl:top-8 drop-shadow-black"
           />
           <p
             className={`text-white pl-16 drop-shadow-black ${pixeBoy.className}`}
@@ -245,7 +245,7 @@ export default function Home() {
             SPORTSTUFF
           </p>
         </div>
-        <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[700px] max-h-[700px] bg-fss bg-bottom bg-cover">
+        <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] xl:h-[700px] xl:max-h-[700px] bg-fss bg-bottom bg-cover">
           <button className="w-full h-full" onMouseEnter={() => setSs(true)}>
             <Image
               src="/ss.png"
@@ -285,9 +285,9 @@ export default function Home() {
       >
         <div className="flex flex-col  gap-16 text-white xl:pb-24">
           <div className="flex justify-between items-center xl:px-[100px] xl:mt-16 relative">
-            <div className="flex flex-col gap-14 w-full xl:max-w-[1000px] px-[22px] xl:px-0 pt-10 pb-10 z-10">
+            <div className="flex flex-col xl:gap-14 w-full xl:max-w-[1000px] px-[22px] xl:px-0 pt-10 pb-10 z-10">
               <p
-                className={`text-[24px] xl:text-[134px] xl:leading-[46px]  drop-shadow-black ${pixeBoy.className}`}
+                className={`text-[74px] xl:text-[134px] xl:leading-[46px] drop-shadow-black ${pixeBoy.className}`}
               >
                 $JUG TOKEN
               </p>
@@ -305,7 +305,11 @@ export default function Home() {
               placeholder="blur"
               blurDataURL="/coins.svg"
               alt="coins"
-              className="w-[40px] xl:w-[680px] absolute right-0 top-[-130px] z-0 transition-all hover:scale-[1.03] hover:right-10 duration-300"
+              className="
+                w-[240px] absolute right-0 bottom-[-30px] z-0 transition-all hover:scale-[1.03] hover:right-10 duration-300
+                xl:w-[680px] xl:right-0 xl:top-[-130px] opacity-30 xl:opacity-100
+
+              "
             />
           </div>
           {/* <div className="flex items-center gap-16 xl:px-[100px]">
@@ -337,7 +341,7 @@ export default function Home() {
 
       {/* TEAM */}
       <section id="team" className="bg-jugz4 bg-section bg-no-repeat bg-center">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px] px-[26px] xl:px-[100px] py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20">
           <Image
             src="/section-arrows-light.svg"
             width={180}
@@ -345,7 +349,7 @@ export default function Home() {
             placeholder="blur"
             blurDataURL="/section-arrows-light.svg"
             alt="game modes"
-            className="w-[40px] xl:w-[180px] absolute left-[-50px] top-8 drop-shadow-black"
+            className="w-[100px] xl:w-[180px] absolute left-[-40px] xl:left-[-50px] top-6 xl:top-8 drop-shadow-black"
           />
           <p
             className={`text-white pl-16 drop-shadow-black ${pixeBoy.className}`}
@@ -354,79 +358,36 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="hidden md:flex gap-24 items-center flex-wrap px-[26px] xl:px-[100px] xl:mt-16 relative py-24">
-          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz hover:drop-shadow-light">
-            <Image
-              src="/logo-head.svg"
-              width={200}
-              height={339}
-              placeholder="blur"
-              blurDataURL="/logo-head.svg"
-              alt="social betz"
-              className="drop-shadow-xl"
-            />
-            <p
-              className={`text-3xl text-white drop-shadow-black ${pixeBoy.className}`}
+        <div className="flex gap-10 xl:gap-24 justify-center xl:justify-start items-center flex-wrap px-[26px] xl:px-[100px] xl:mt-16 relative py-24">
+          {[1, 2, 3].map((_, index) => (
+            <div
+              key={index}
+              className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz hover:drop-shadow-light"
             >
-              Name
-            </p>
-            <p className="font-bold text-jugz-light">Label</p>
-          </div>
-          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz hover:drop-shadow-light">
-            <Image
-              src="/logo-head.svg"
-              width={200}
-              height={339}
-              placeholder="blur"
-              blurDataURL="/logo-head.svg"
-              alt="social betz"
-              className="drop-shadow-xl"
-            />
-            <p
-              className={`text-3xl text-white drop-shadow-black ${pixeBoy.className}`}
-            >
-              Name
-            </p>
-            <p className="font-bold text-jugz-light">Label</p>
-          </div>
-          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz hover:drop-shadow-light">
-            <Image
-              src="/logo-head.svg"
-              width={200}
-              height={339}
-              placeholder="blur"
-              blurDataURL="/logo-head.svg"
-              alt="social betz"
-              className="drop-shadow-xl"
-            />
-            <p
-              className={`text-3xl text-white drop-shadow-black ${pixeBoy.className}`}
-            >
-              Name
-            </p>
-            <p className="font-bold text-jugz-light">Label</p>
-          </div>
-        </div>
-
-        <div className="flex md:hidden flex-col items-center justify-center gap-10 py-10">
-          <div className="p-4 bg-white">
-            <Image
-              src="/logo-head.svg"
-              width={200}
-              height={339}
-              placeholder="blur"
-              blurDataURL="/logo-head.svg"
-              alt="social betz"
-              className="drop-shadow-xl"
-            />
-          </div>
+              <Image
+                src="/logo-head.svg"
+                width={200}
+                height={339}
+                placeholder="blur"
+                blurDataURL="/logo-head.svg"
+                alt="social betz"
+                className="drop-shadow-xl w-[100px] xl:w-[200px]"
+              />
+              <p
+                className={`text-3xl text-white drop-shadow-black ${pixeBoy.className}`}
+              >
+                Name
+              </p>
+              <p className="font-bold text-jugz-light">Label</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* BUTTON TO TOP */}
       <Link
         href="#top"
-        className="fixed bottom-24 right-24 bg-jugz/60 p-2 rounded-lg text-jugz-light z-30 transition-all hover:scale-[1.03] hover:text-white shadow-md"
+        className="hidden xl:block fixed bottom-24 right-24 bg-jugz/60 p-2 rounded-lg text-jugz-light z-30 transition-all hover:scale-[1.03] hover:text-white shadow-md"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

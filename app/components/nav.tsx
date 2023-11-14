@@ -26,7 +26,7 @@ export default function Nav() {
       {/* DESKTOP */}
       <main id="top" className="hidden lg:flex w-full max-w-[1920px] bg-black">
         <div
-          className={`flex items-center justify-between w-full py-[35px] md:px-[20px] xl:px-[100px] border-b border-jugz-light/20 ${pixeBoy.className}`}
+          className={`flex items-center justify-between w-full py-[35px] md:px-[20px] xl:px-[40px] 2xl:px-[100px] border-b border-jugz-light/20 ${pixeBoy.className}`}
         >
           <Link href="/" className="hover:opacity-75">
             <Image
@@ -41,7 +41,7 @@ export default function Nav() {
           </Link>
 
           <div className="flex items-center justify-end w-full md:gap-6 xl:gap-10">
-            <div className="text-jugz-light flex items-center md:gap-6 xl:gap-10 font-light md:text-[16px] xl:text-[24px]">
+            <div className="text-jugz-light flex items-center md:gap-6 2xl:gap-10 font-light md:text-[16px] xl:text-[24px]">
               {routes.map((item, index) => (
                 <Link
                   key={index}
@@ -70,11 +70,11 @@ export default function Nav() {
           <div className="min-w-[138px] max-w-[138px] sm:min-w-[168px] sm:max-w-[168px]">
             <Link href="/" className="hover:opacity-75">
               <Image
-                src="/logo.svg"
-                width={38}
-                height={23}
+                src="/logo-mobile.svg"
+                width={68}
+                height={164}
                 placeholder="blur"
-                blurDataURL="/logo.svg"
+                blurDataURL="/logo-mobile.svg"
                 alt="logo"
               />
             </Link>
@@ -125,7 +125,7 @@ export default function Nav() {
                   key={index}
                   href={item.href}
                   className={`
-                    transition-all font-light text-[16px] bg-jugz p-4 bg-opacity-90 hover:bg-opacity-60 hover:text-jugz-light hover:border-l-[6px] hover:border-white border-purple-betz rounded-lg shadow-md                     
+                    transition-all font-light text-[16px] text-jugz-light bg-jugz p-4 bg-opacity-90 hover:bg-opacity-60 hover:text-jugz-light hover:border-l-[6px] hover:border-white border-purple-betz rounded-lg shadow-md                     
                     ${
                       item.href === page.href &&
                       "border-l-[6px] hover:text-jugz-light hover:border-white"
