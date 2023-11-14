@@ -335,7 +335,7 @@ export default function Home() {
         </div>
 
         <div className="hidden md:flex gap-24 items-center flex-wrap px-[26px] xl:px-[100px] xl:mt-16 relative py-24">
-          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-full hover:bg-jugz delay-150">
+          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz">
             <Image
               src="/logo-head.svg"
               width={200}
@@ -348,7 +348,7 @@ export default function Home() {
             <p className={`text-3xl text-white ${pixeBoy.className}`}>Name</p>
             <p className="font-bold">Label</p>
           </div>
-          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-full hover:bg-jugz delay-150">
+          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz">
             <Image
               src="/logo-head.svg"
               width={200}
@@ -361,7 +361,7 @@ export default function Home() {
             <p className={`text-3xl text-white ${pixeBoy.className}`}>Name</p>
             <p className="font-bold">Label</p>
           </div>
-          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-full hover:bg-jugz delay-150">
+          <div className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz">
             <Image
               src="/logo-head.svg"
               width={200}
