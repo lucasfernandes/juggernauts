@@ -9,7 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Juggernauts",
-  description: "",
+  description:
+    "Bringing Sports Fans into the Web3 world through innovative SportFi dApps that are very rewarding, highly intuitive, and extremely fun.",
 };
 
 export default function RootLayout({

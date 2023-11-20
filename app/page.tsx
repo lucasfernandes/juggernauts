@@ -181,7 +181,7 @@ export default function Home() {
           >
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-900 to-blue-900/80 flex items-center justify-center">
               <Link
-                href="https://fullset-sports.vercel.app/"
+                href="https://fullsetsports.com"
                 target="blank"
                 className={`transition-all bg-white border border-blue-400 w-[198px] h-[49px] flex justify-center items-center rounded-lg text-jugz text-[20px] font-medium hover:scale-[1.02] hover:drop-shadow-light ${pixeBoy.className}`}
               >
