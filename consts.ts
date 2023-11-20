@@ -13,7 +13,7 @@ export const routes: { title: string; href: string }[] = [
     href: "/#ecosystem",
   },
   {
-    title: "$JUGZ",
+    title: "$JUG",
     href: "/#jugz",
   },
   {

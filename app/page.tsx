@@ -27,6 +27,25 @@ const bettors = [
   "Achieve an amazing sports betting win rate ",
 ];
 
+const team = [
+  {
+    image: "/logo-head-orange.svg",
+    name: "Paul Osmand",
+    label: "CEO",
+    description:
+      "A serial entrepreneur with a love for crypto, sports, and family, Paul finished his MBA degree in 2019 and entered the Web3 industry soon after. He has worked in management positions for a number of successful Web3 projects and has advised many successful startups throughout the token and product launch cycles.",
+    social: "https://www.linkedin.com/in/paul-osmond-53381b179/",
+  },
+  {
+    image: "/logo-head.svg",
+    name: "Lucas Silveira",
+    label: "CTO",
+    description:
+      "A serial entrepreneur with a love for crypto, sports, and family, Paul finished his MBA degree in 2019 and entered the Web3 industry soon after. He has worked in management positions for a number of successful Web3 projects and has advised many successful startups throughout the token and product launch cycles.",
+    social: "https://www.linkedin.com/in/lfsilveira/",
+  },
+];
+
 export default function Home() {
   const [fss, setFss] = useState(false);
   const [sb, setSb] = useState(false);
@@ -82,7 +101,7 @@ export default function Home() {
         id="sportifi"
         className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center"
       >
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
           <Image
             src="/section-arrows-light.svg"
             width={180}
@@ -102,18 +121,16 @@ export default function Home() {
           <div className="flex justify-between items-center xl:px-[100px] xl:mt-16 relative">
             <div className="flex flex-col gap-10 w-full xl:max-w-[1000px] px-[22px] xl:px-0 pt-10 pb-10 z-10 drop-shadow-black">
               <p className={`text-[24px] xl:text-[34px] xl:leading-[46px]`}>
-                SportFi, a portmanteau of{" "}
-                <span className="text-white">Sport</span> and{" "}
-                <span className="text-white">Finance</span> is an amalgamation
-                of real word professional sports and finance that allows for the
-                creation of novel decentralized applications that are built
-                using blockchain technology.
+                <span className="text-white">SportFi</span> is an amalgamation
+                of real world pro sports and decentralized finance that allows
+                for the creation of innovative decentralized applications that
+                are built using blockchain technology.
               </p>
               <p className={`text-[24px] xl:text-[34px] xl:leading-[46px]`}>
                 With the integration of smart contracts, non fungible tokens,
-                and cryptocurrencies, Juggernauts will disrupt the ways in which
-                sports fans enjoy their favorite sports and engage with their
-                favorite athletes.
+                and cryptocurrencies, Juggernauts Sports will disrupt the ways
+                in which sports fans enjoy their favorite sports and engage with
+                their favorite athletes.
               </p>
             </div>
           </div>
@@ -125,7 +142,7 @@ export default function Home() {
         id="ecosystem"
         className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center"
       >
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
           <Image
             src="/section-arrows-light.svg"
             width={180}
@@ -177,7 +194,7 @@ export default function Home() {
 
       {/* SOCIAL BETZ */}
       <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
           <Image
             src="/section-arrows-light.svg"
             width={180}
@@ -193,8 +210,8 @@ export default function Home() {
             Socialbetz
           </p>
         </div>
-        <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] xl:h-[700px] xl:max-h-[700px] bg-fss bg-bottom bg-cover">
-          <button className="w-full h-full" onMouseEnter={() => setSb(true)}>
+        <div className="flex flex-col gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] xl:h-[700px] xl:max-h-[700px] bg-fss bg-bottom bg-cover">
+          <button className="w-full h-full">
             <Image
               src="/sb.png"
               placeholder="blur"
@@ -212,7 +229,7 @@ export default function Home() {
             leave="transition-opacity duration-150"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-            onMouseLeave={() => setSb(false)}
+            // onMouseLeave={() => setSb(false)}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-900 to-blue-900/80 flex items-center justify-center">
               <Link
@@ -229,7 +246,7 @@ export default function Home() {
 
       {/* SPORT STUFF */}
       <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center z-20">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
           <Image
             src="/section-arrows-light.svg"
             width={180}
@@ -246,7 +263,7 @@ export default function Home() {
           </p>
         </div>
         <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] xl:h-[700px] xl:max-h-[700px] bg-fss bg-bottom bg-cover">
-          <button className="w-full h-full" onMouseEnter={() => setSs(true)}>
+          <button className="w-full h-full">
             <Image
               src="/ss.png"
               placeholder="blur"
@@ -264,7 +281,7 @@ export default function Home() {
             leave="transition-opacity duration-150"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-            onMouseLeave={() => setSs(false)}
+            // onMouseLeave={() => setSs(false)}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-900 to-blue-900/80 flex items-center justify-center">
               <Link
@@ -315,7 +332,7 @@ export default function Home() {
           {/* <div className="flex items-center gap-16 xl:px-[100px]">
             <div className="flex flex-col bg-black/70 border border-jugz-light rounded-[8px] p-5 text-center min-w-[300px] max-w-[300px] transition-all hover:scale-[1.03] hover:drop-shadow-light">
               <p className={`text-6xl text-white ${pixeBoy.className}`}>
-                1B $JUGZ
+                1B $JUG
               </p>
               <p className="text-[16px] text-jugz-light">Total Supply</p>
             </div>
@@ -341,7 +358,7 @@ export default function Home() {
 
       {/* TEAM */}
       <section id="team" className="bg-jugz4 bg-section bg-no-repeat bg-center">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20">
+        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
           <Image
             src="/section-arrows-light.svg"
             width={180}
@@ -359,26 +376,49 @@ export default function Home() {
         </div>
 
         <div className="flex gap-10 xl:gap-24 justify-center xl:justify-start items-center flex-wrap px-[26px] xl:px-[100px] xl:mt-16 relative py-24">
-          {[1, 2, 3].map((_, index) => (
+          {team.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col justify-center items-center w-[200px] h-[200px] xl:w-[350px] xl:h-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.02] hover:rounded-[100px] hover:bg-jugz hover:drop-shadow-light"
+              className="flex flex-col justify-center items-center w-[200px] xl:w-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.03] hover:bg-jugz hover:shadow-xl"
             >
               <Image
-                src="/logo-head.svg"
+                src={item.image}
                 width={200}
                 height={339}
                 placeholder="blur"
-                blurDataURL="/logo-head.svg"
+                blurDataURL={item.image}
                 alt="social betz"
                 className="drop-shadow-xl w-[100px] xl:w-[200px]"
               />
               <p
                 className={`text-3xl text-white drop-shadow-black ${pixeBoy.className}`}
               >
-                Name
+                {item.name}
               </p>
-              <p className="font-bold text-jugz-light">Label</p>
+              <div className="flex items-center gap-2 font-bold text-jugz-light">
+                {item.label}
+                <Link
+                  href={item.social}
+                  className="transition-all hover:opacity-75"
+                  target="blank"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    className="bi bi-linkedin"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                  </svg>
+                </Link>
+              </div>
+              <p
+                className={`p-6 text-justify text-jugz-light leading-[32px] ${pixeBoy.className}`}
+              >
+                {item.description}
+              </p>
             </div>
           ))}
         </div>

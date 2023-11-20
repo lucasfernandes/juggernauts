@@ -40,7 +40,7 @@ export default function Nav() {
             />
           </Link>
 
-          <div className="flex items-center justify-end w-full md:gap-6 xl:gap-10">
+          <div className="flex items-center justify-end w-full md:gap-6 xl:gap-20">
             <div className="text-jugz-light flex items-center md:gap-6 2xl:gap-10 font-light md:text-[16px] xl:text-[24px]">
               {routes.map((item, index) => (
                 <Link
