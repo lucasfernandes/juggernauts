@@ -14,6 +14,7 @@ const config: Config = {
       },
       dropShadow: {
         black: "2px 5px 0px rgba(0, 0, 0, 1)",
+        "black-small": "2px 2px 0px rgba(0, 0, 0, 1)",
         light: "5px 5px 15px rgba(201, 218, 248, 0.3)",
       },
       backgroundImage: {

@@ -395,7 +395,7 @@ export default function Home() {
               >
                 {item.name}
               </p>
-              <div className="flex items-center gap-2 font-bold text-jugz-light">
+              <div className="flex items-center gap-2 font-bold text-jugz-light  drop-shadow-black-small">
                 {item.label}
                 <Link
                   href={item.social}
@@ -415,7 +415,7 @@ export default function Home() {
                 </Link>
               </div>
               <p
-                className={`p-6 text-justify text-jugz-light leading-[32px] ${pixeBoy.className}`}
+                className={`p-6 text-justify text-jugz-light leading-[32px] drop-shadow-black-small ${pixeBoy.className}`}
               >
                 {item.description}
               </p>
