@@ -44,6 +44,14 @@ const team = [
       "A serial entrepreneur with a love for crypto, sports, and family, Paul finished his MBA degree in 2019 and entered the Web3 industry soon after. He has worked in management positions for a number of successful Web3 projects and has advised many successful startups throughout the token and product launch cycles.",
     social: "https://www.linkedin.com/in/lfsilveira/",
   },
+  {
+    image: "/logo-head-red.svg",
+    name: "Slance",
+    label: "GRAPHICS & DESIGN",
+    description:
+      "Slance provides on-demand design & video production manpower to agencies that rocket-boost client brand credibility with social video content. Since 2020, our in-house team has produced over 250 videos that built thriving communities and helped promising brands scale next level. Specialized in: educational ...",
+    social: "https://www.linkedin.com/company/slance-co/",
+  },
 ];
 
 export default function Home() {
@@ -138,10 +146,7 @@ export default function Home() {
       </section>
 
       {/* FULLSET SPORTS */}
-      <section
-        id="ecosystem"
-        className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center"
-      >
+      <section id="ecosystem">
         <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
           <Image
             src="/section-arrows-light.svg"
@@ -158,7 +163,7 @@ export default function Home() {
             FullSet Sports
           </p>
         </div>
-        <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] xl:h-[700px] xl:max-h-[700px] bg-fss bg-bottom bg-cover">
+        <div className="flex flex-col gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] md:h-[400px] md:max-h-[400px] xl:h-[700px] xl:max-h-[700px] overflow-hidden">
           <button className="w-full h-full" onMouseEnter={() => setFss(true)}>
             <Image
               src="/fss.png"
@@ -193,7 +198,7 @@ export default function Home() {
       </section>
 
       {/* SOCIAL BETZ */}
-      <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center">
+      <section>
         <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
           <Image
             src="/section-arrows-light.svg"
@@ -210,7 +215,7 @@ export default function Home() {
             Socialbetz
           </p>
         </div>
-        <div className="flex flex-col gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] xl:h-[700px] xl:max-h-[700px] bg-fss bg-bottom bg-cover">
+        <div className="flex flex-col gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] md:h-[400px] md:max-h-[400px]  lg:h-[600px] lg:max-h-[600px] xl:h-[700px] xl:max-h-[700px]">
           <button className="w-full h-full">
             <Image
               src="/sb.png"
@@ -245,7 +250,7 @@ export default function Home() {
       </section>
 
       {/* SPORT STUFF */}
-      <section className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center z-20">
+      <section className="z-20">
         <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
           <Image
             src="/section-arrows-light.svg"
@@ -262,7 +267,7 @@ export default function Home() {
             SPORTSTUFF
           </p>
         </div>
-        <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] xl:h-[700px] xl:max-h-[700px] bg-fss bg-bottom bg-cover">
+        <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] md:h-[400px] md:max-h-[400px]  lg:h-[600px] lg:max-h-[600px] xl:h-[700px] xl:max-h-[700px]">
           <button className="w-full h-full">
             <Image
               src="/ss.png"
@@ -357,7 +362,7 @@ export default function Home() {
       </section>
 
       {/* TEAM */}
-      <section id="team" className="bg-jugz4 bg-section bg-no-repeat bg-center">
+      <section id="team" className="bg-jugz4 bg-section bg-no-repeat bg-cover">
         <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
           <Image
             src="/section-arrows-light.svg"
@@ -375,11 +380,11 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex gap-10 xl:gap-24 justify-center xl:justify-start items-center flex-wrap px-[26px] xl:px-[100px] xl:mt-16 relative py-24">
+        <div className="flex gap-10 2xl:gap-24  items-center flex-wrap px-[26px] xl:px-[100px] xl:mt-16 relative py-24">
           {team.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col justify-center items-center w-[200px] xl:w-[350px] bg-jugz/70 border border-jugz rounded transition-all hover:scale-[1.03] hover:bg-jugz hover:shadow-xl"
+              className="flex flex-col justify-center items-center w-full md:w-[300px] lg:w-[350px] xl:w-[330px] 2xl:w-[400px] bg-slate-900 border border-jugz rounded transition-all hover:scale-[1.03] hover:bg-slate-800 hover:shadow-xl pt-5"
             >
               <Image
                 src={item.image}
@@ -415,7 +420,7 @@ export default function Home() {
                 </Link>
               </div>
               <p
-                className={`p-6 text-justify text-jugz-light leading-[32px] drop-shadow-black-small ${pixeBoy.className}`}
+                className={`p-6 text-justify text-jugz-light xl:leading-[32px] drop-shadow-black-small ${pixeBoy.className}`}
               >
                 {item.description}
               </p>
