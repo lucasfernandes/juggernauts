@@ -33,7 +33,7 @@ const team = [
     name: "Paul Osmand",
     label: "CEO",
     description:
-      "A serial entrepreneur with a love for crypto, sports, and family, Paul finished his MBA degree in 2019 and entered the Web3 industry soon after. He has worked in management positions for a number of successful Web3 projects and has advised many successful startups throughout the token and product launch cycles.",
+      "A serial entrepreneur with a love for family, sports, and crypto. Paul has worked in leadership positions for a number of blockchain projects and has advised many successful startups throughout the token and product launch cycles.",
     social: "https://www.linkedin.com/in/paul-osmond-53381b179/",
   },
   {
@@ -41,15 +41,15 @@ const team = [
     name: "Lucas Silveira",
     label: "CTO",
     description:
-      "A serial entrepreneur with a love for crypto, sports, and family, Paul finished his MBA degree in 2019 and entered the Web3 industry soon after. He has worked in management positions for a number of successful Web3 projects and has advised many successful startups throughout the token and product launch cycles.",
+      "Lucas brings 16+ years of development experience to the table with 2+ years developing blockchain-based solutions for innovative Web3 platforms.",
     social: "https://www.linkedin.com/in/lfsilveira/",
   },
   {
     image: "/logo-head-red.svg",
     name: "Slance",
-    label: "GRAPHICS & DESIGN",
+    label: " Creative Growth Partner",
     description:
-      "Slance provides on-demand design & video production manpower to agencies that rocket-boost client brand credibility with social video content. Since 2020, our in-house team has produced over 250 videos that built thriving communities and helped promising brands scale next level. Specialized in: educational ...",
+      "Slance helps crypto & blockchain teams become niche authorities with visual storytelling, identifying growth areas, and fitting creatives plans into the overall marketing strategy.",
     social: "https://www.linkedin.com/company/slance-co/",
   },
 ];
@@ -420,7 +420,7 @@ export default function Home() {
                 </Link>
               </div>
               <p
-                className={`p-6 text-justify text-jugz-light xl:leading-[32px] drop-shadow-black-small ${pixeBoy.className}`}
+                className={`p-6 text-justify text-jugz-light xl:leading-[32px] drop-shadow-black-small md:min-h-[240px] 2xl:min-h-[200px] ${pixeBoy.className}`}
               >
                 {item.description}
               </p>
