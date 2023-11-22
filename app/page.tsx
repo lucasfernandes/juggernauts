@@ -123,12 +123,12 @@ export default function Home() {
           </p>
         </div>
         <div className="flex flex-col  gap-16 text-jugz-light xl:pb-24">
-          <div className="flex justify-between items-center xl:px-[100px] xl:mt-16 relative">
-            <div className="flex flex-col gap-10 w-full px-[22px] xl:px-0 pt-10 pb-10 z-10 drop-shadow-black">
+          <div className="flex justify-between items-center xl:px-[80px] xl:mt-16 relative">
+            <div className="flex flex-col gap-16 w-full px-[22px] xl:px-0 pt-10 pb-10 z-10 drop-shadow-black">
               <p
                 className={`flex text-[24px] xl:text-[30px] xl:leading-[46px] border-2 rounded-[15px] p-10 max-w-[700px] bg-black/70 backdrop-blur-md`}
               >
-                SportFi relates to the intertwining of real world pro sports and
+                SportFi is the intertwining of real world pro sports and
                 decentralized finance that allows for the creation of novel
                 decentralized applications built on the blockchain.
               </p>
@@ -136,8 +136,9 @@ export default function Home() {
                 className={`flex text-[24px] xl:text-[30px] xl:leading-[46px] border-2 rounded-[15px] p-10 max-w-[700px] self-end bg-black/70 backdrop-blur-md`}
               >
                 Utilizing smart contracts, non fungible tokens, and crypto,
-                SportFi will enhance the viewing, gaming, and engagement
-                experience of global sports fans.
+                SportFi will SportFi enhances the fan engagement experience and
+                creates new ways for sports fans to follow their favorite
+                athletes and enjoy their favorite sports.
               </p>
             </div>
           </div>
