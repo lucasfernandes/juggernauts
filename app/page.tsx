@@ -41,7 +41,7 @@ const team = [
     name: "Lucas Silveira",
     label: "CTO",
     description:
-      "Lucas brings 16+ years of development experience to the table with 2+ years developing blockchain-based solutions for innovative Web3 platforms.",
+      "Lucas brings 16+ years of development experience to the table with 2+ years developing blockchain-based solutions for the most innovative platforms in the Web3 space. Lucas relishes the opportunity to be an agent of change for processes and people.",
     social: "https://www.linkedin.com/in/lfsilveira/",
   },
   {
@@ -420,7 +420,7 @@ export default function Home() {
                 </Link>
               </div>
               <p
-                className={`p-6 text-justify text-jugz-light xl:leading-[32px] drop-shadow-black-small md:min-h-[240px] 2xl:min-h-[200px] ${pixeBoy.className}`}
+                className={`p-6 text-justify text-jugz-light xl:leading-[32px] drop-shadow-black-small md:min-h-[280px] 2xl:min-h-[200px] ${pixeBoy.className}`}
               >
                 {item.description}
               </p>
