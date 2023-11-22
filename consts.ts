@@ -24,4 +24,8 @@ export const routes: { title: string; href: string }[] = [
     title: "Whitepaper",
     href: "#",
   },
+  {
+    title: "Analysis",
+    href: "/analysis",
+  },
 ];
