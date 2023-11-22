@@ -23,6 +23,7 @@ const config: Config = {
         jugz3: "url('/backgrounds/3.png')",
         jugz4: "url('/backgrounds/4.png')",
         jugz5: "url('/backgrounds/5.png')",
+        jugz6: "url('/backgrounds/6.png')",
         fss: "url('/fss.png')",
         sb: "url('/sb.png')",
         ss: "url('/ss.png')",

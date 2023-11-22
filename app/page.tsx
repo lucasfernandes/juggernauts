@@ -93,11 +93,8 @@ export default function Home() {
               <p
                 className={`font-medium text-[26px] xl:text-[32px] leading-[35px] xl:leading-[40px] 2xl:leading-[45px] text-jugz-light drop-shadow-black`}
               >
-                Bringing Sports Fans into the Web3 world through innovative
-                SportFi dApps that are very{" "}
-                <span className="text-jugz-light">rewarding</span>, highly{" "}
-                <span className="text-jugz-light">intuitive</span>, and
-                extremely <span className="text-jugz-light">fun</span>.
+                Building badass <span className="text-jugz-light">SportFi</span>{" "}
+                dApps.
               </p>
             </div>
           </div>
@@ -107,7 +104,7 @@ export default function Home() {
       {/* WHATS IS SPORTIFI */}
       <section
         id="sportifi"
-        className="bg-black bg-jugz2 xl:bg-numbers bg-no-repeat bg-center"
+        className="bg-black bg-jugz6 bg-no-repeat bg-cover"
       >
         <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
           <Image
@@ -127,18 +124,20 @@ export default function Home() {
         </div>
         <div className="flex flex-col  gap-16 text-jugz-light xl:pb-24">
           <div className="flex justify-between items-center xl:px-[100px] xl:mt-16 relative">
-            <div className="flex flex-col gap-10 w-full xl:max-w-[1000px] px-[22px] xl:px-0 pt-10 pb-10 z-10 drop-shadow-black">
-              <p className={`text-[24px] xl:text-[34px] xl:leading-[46px]`}>
-                <span className="text-white">SportFi</span> is an amalgamation
-                of real world pro sports and decentralized finance that allows
-                for the creation of innovative decentralized applications that
-                are built using blockchain technology.
+            <div className="flex flex-col gap-10 w-full px-[22px] xl:px-0 pt-10 pb-10 z-10 drop-shadow-black">
+              <p
+                className={`flex text-[24px] xl:text-[30px] xl:leading-[46px] border-2 rounded-[15px] p-10 max-w-[700px] bg-black/70 backdrop-blur-md`}
+              >
+                SportFi relates to the intertwining of real world pro sports and
+                decentralized finance that allows for the creation of novel
+                decentralized applications built on the blockchain.
               </p>
-              <p className={`text-[24px] xl:text-[34px] xl:leading-[46px]`}>
-                With the integration of smart contracts, non fungible tokens,
-                and cryptocurrencies, Juggernauts Sports will disrupt the ways
-                in which sports fans enjoy their favorite sports and engage with
-                their favorite athletes.
+              <p
+                className={`flex text-[24px] xl:text-[30px] xl:leading-[46px] border-2 rounded-[15px] p-10 max-w-[700px] self-end bg-black/70 backdrop-blur-md`}
+              >
+                Utilizing smart contracts, non fungible tokens, and crypto,
+                SportFi will enhance the viewing, gaming, and engagement
+                experience of global sports fans.
               </p>
             </div>
           </div>
