@@ -104,7 +104,7 @@ export default function Home() {
       {/* WHATS IS SPORTIFI */}
       <section
         id="sportifi"
-        className="bg-black bg-jugz6 bg-no-repeat bg-cover"
+        className="bg-black bg-jugz6 bg-no-repeat bg-cover bg-right"
       >
         <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
           <Image
