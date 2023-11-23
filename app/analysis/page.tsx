@@ -8,7 +8,7 @@ export default function Analysis() {
     <iframe
       id="frame"
       className="w-full max-w-[1620px] min-h-[1000px] !bg-black pt-16"
-      src="https://v2-embednotion.com/3324b4c6bea94d80a284104c560c94fd?v=be278133e5f247a89d9c4bd0196c4458&pvs=4"
+      src="https://v2-embednotion.com/965210314e7f4af7940d259d589e7ddd?v=36c5e4a8cd8d4bcaad2f465325fd0040"
     ></iframe>
   );
 }
