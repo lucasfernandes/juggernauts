@@ -21,6 +21,10 @@ export const routes: { title: string; href: string }[] = [
     href: "/#team",
   },
   {
+    title: "Analysis",
+    href: "/analysis",
+  },
+  {
     title: "Whitepaper",
     href: "#",
   },
