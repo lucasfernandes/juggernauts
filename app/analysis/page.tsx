@@ -1,9 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-
 export default function Analysis() {
-  useEffect(() => {}, []);
   return (
     <iframe
       id="frame"
