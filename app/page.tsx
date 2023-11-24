@@ -136,9 +136,9 @@ export default function Home() {
                 className={`flex text-[24px] xl:text-[30px] xl:leading-[46px] border-2 rounded-[15px] p-10 max-w-[700px] self-end bg-black/70 backdrop-blur-md`}
               >
                 Utilizing smart contracts, non fungible tokens, and crypto,
-                SportFi will SportFi enhances the fan engagement experience and
-                creates new ways for sports fans to follow their favorite
-                athletes and enjoy their favorite sports.
+                SportFi enhances the fan engagement experience and creates new
+                ways for sports fans to follow their favorite athletes and enjoy
+                their favorite sports.
               </p>
             </div>
           </div>
