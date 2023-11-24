@@ -30,7 +30,7 @@ const bettors = [
 const team = [
   {
     image: "/logo-head-orange.svg",
-    name: "Paul Osmand",
+    name: "Paul Osmond",
     label: "CEO",
     description:
       "A serial entrepreneur with a love for family, sports, and crypto. Paul has worked in leadership positions for a number of blockchain projects and has advised many successful startups throughout the token and product launch cycles.",
