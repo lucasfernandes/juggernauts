@@ -21,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body>
-        <div className="flex flex-col items-center bg-jugz1 bg-no-repeat bg-top">
+        <div
+          className={`flex flex-col justify-center items-center text-grayer font-extralight leading-[36px] ${inter.className}`}
+        >
           <StateProvider>
             <Nav />
             {children}

@@ -1,71 +1,57 @@
 "use client";
 import Image from "next/image";
 import { useContext, useState } from "react";
-import { Roboto_Condensed } from "next/font/google";
 import { routes } from "@/consts";
 import Link from "next/link";
 import { StateContext } from "../context/StateContext";
 import { Transition } from "@headlessui/react";
-import localFont from "next/font/local";
 
-// Font files can be colocated inside of `app`
-const pixeBoy = localFont({
-  src: "../Pixeboy.woff2",
-  display: "swap",
-});
-
-const roboto = Roboto_Condensed({
-  weight: ["300", "400", "700"],
-  subsets: ["latin"],
-});
 export default function Nav() {
   const { page, setPage } = useContext(StateContext);
   const [open, setOpen] = useState(false);
   return (
     <>
       {/* DESKTOP */}
-      <main id="top" className="hidden lg:flex w-full max-w-[1920px] bg-black">
-        <div
-          className={`flex items-center justify-between w-full py-[35px] md:px-[20px] xl:px-[40px] 2xl:px-[100px] border-b border-jugz-light/20 ${pixeBoy.className}`}
-        >
+      <main
+        id="top"
+        className="hidden lg:flex w-full max-w-[1920px] h-[84px] bg-white bg-pixel bg-contain bg-center"
+      >
+        <div className="flex justify-center items-center w-full gap-[50px]">
           <Link href="/" className="hover:opacity-75">
             <Image
-              src="/logo.svg"
-              width={368}
-              height={164}
+              src="/header-logo.svg"
+              width={310}
+              height={69}
               placeholder="blur"
               blurDataURL="/logo.svg"
               alt="logo"
-              className="pb-3"
+              className="pr-14"
             />
           </Link>
-
-          <div className="flex items-center justify-end w-full md:gap-6 xl:gap-20">
-            <div className="text-jugz-light flex items-center md:gap-6 2xl:gap-10 font-light md:text-[16px] xl:text-[24px]">
-              {routes.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className={`transition-all hover:border-b-[5px] border-jugz pb-1 ${
-                    item.href === page.href && "border-b-[5px]"
-                  } `}
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </div>
-            <button
-              className={`transition-all bg-jugz w-[198px] h-[49px] flex justify-center items-center rounded-lg text-white text-[20px] font-medium hover:scale-[1.02] ${pixeBoy.className}`}
-            >
-              Connect Wallet
-            </button>
+          <div className="text-[#18191F] flex items-center md:gap-6 2xl:gap-10 font-light md:text-[16px]">
+            {routes.map((item, index) => (
+              <Link
+                key={index}
+                href={item.href}
+                className={`transition-all hover:border-b-[5px] border-green pb-1 ${
+                  item.href === page.href && "border-b-[5px]"
+                } `}
+              >
+                {item.title}
+              </Link>
+            ))}
           </div>
+          <button
+            className={`transition-all bg-green w-[198px] h-[49px] flex justify-center items-center rounded-lg text-white text-[20px] font-medium hover:scale-[1.02]`}
+          >
+            Connect Wallet
+          </button>
         </div>
       </main>
       {/* MOBILE */}
-      <main className="flex flex-col lg:hidden w-full bg-nav bg-no-repeat bg-cover relative z-20">
+      <main className="flex flex-col hidden w-full bg-nav bg-no-repeat bg-cover relative z-20">
         <div
-          className={`flex items-center justify-between w-full pt-[25px] px-[20px] ${pixeBoy.className}`}
+          className={`flex items-center justify-between w-full pt-[25px] px-[20px]`}
         >
           <div className="min-w-[138px] max-w-[138px] sm:min-w-[168px] sm:max-w-[168px]">
             <Link href="/" className="hover:opacity-75">
@@ -81,9 +67,7 @@ export default function Nav() {
           </div>
 
           <div className="flex gap-2 sm:gap-4 items-center">
-            <button
-              className={`bg-jugz transition-all w-[100px] sm:w-[120px] h-[33px] flex justify-center items-center rounded-lg text-jugz-light text-[12px] sm:text-[14px] font-medium hover:scale-[1.02] ${roboto.className}`}
-            >
+            <button className="bg-jugz transition-all w-[100px] sm:w-[120px] h-[33px] flex justify-center items-center rounded-lg text-jugz-light text-[12px] sm:text-[14px] font-medium hover:scale-[1.02]">
               Connect Wallet
             </button>
 
