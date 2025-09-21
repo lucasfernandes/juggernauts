@@ -15,8 +15,12 @@ export const partners = [
 ];
 
 export const socials = [
-  "/twitter.svg",
-  "/linkedin.svg",
-  "/telegram.svg",
-  "/email.svg",
+  {
+    title: "Twitter",
+    src: "/twitter.svg",
+    href: "https://x.com/0xJuggernauts",
+  },
+  { title: "Linkedin", src: "/linkedin.svg", href: "#" },
+  { title: "Telegram", src: "/telegram.svg", href: "#" },
+  { title: "Email", src: "/email.svg", href: "#" },
 ];

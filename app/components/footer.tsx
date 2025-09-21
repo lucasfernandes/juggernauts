@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { socials } from "@/consts";
 
 export default function Footer() {
   return (
@@ -24,10 +25,11 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <h2 className="text-lg font-bold">Links</h2>
           <div className="flex flex-col gap-2 text-gray">
-            <Link href="#">Twitter</Link>
-            <Link href="#">Linkedin</Link>
-            <Link href="#">Telegram</Link>
-            <Link href="#">Email</Link>
+            {socials.map((item, index) => (
+              <Link key={index} href={item.href} target="blank">
+                {item.title}
+              </Link>
+            ))}
           </div>
         </div>
         <div className="flex flex-col gap-4">

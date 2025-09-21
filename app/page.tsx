@@ -3,6 +3,7 @@ import Image from "next/image";
 import localFont from "next/font/local";
 import { useState } from "react";
 import { partners, socials } from "@/consts";
+import Link from "next/link";
 
 const jersey25 = localFont({
   src: "./Jersey25-Regular.woff2",
@@ -205,14 +206,15 @@ export default function Home() {
           </h2>
           <div className="flex items-center justify-center w-full gap-10">
             {socials.map((item, index) => (
-              <Image
-                key={index}
-                src={item}
-                width={72}
-                height={72}
-                alt="logo"
-                className="transition-all hover:scale-105 hover:drop-shadow-lg"
-              />
+              <Link key={index} href={item.href} target="blank">
+                <Image
+                  src={item.src}
+                  width={72}
+                  height={72}
+                  alt="logo"
+                  className="transition-all hover:scale-105 hover:drop-shadow-lg"
+                />
+              </Link>
             ))}
           </div>
         </section>
