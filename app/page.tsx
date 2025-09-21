@@ -2,6 +2,7 @@
 import Image from "next/image";
 import localFont from "next/font/local";
 import { useState } from "react";
+import { partners, socials } from "@/consts";
 
 const jersey25 = localFont({
   src: "./Jersey25-Regular.woff2",
@@ -27,7 +28,10 @@ export default function Home() {
           <div className="bg-black h-2" />
         </section>
 
-        <section className="flex items-center justify-center py-16 gap-10 bg-pixel bg-top bg-cover bg-no-repeat w-full h-full min-h-[479px]">
+        <section
+          id="how-it-works"
+          className="flex items-center justify-center py-16 gap-10 bg-pixel bg-top bg-cover bg-no-repeat w-full h-full min-h-[479px]"
+        >
           <Image
             src="/how-it-works-side.svg"
             width={442}
@@ -57,11 +61,12 @@ export default function Home() {
               </li>
               <li>
                 Score points based on the <span className="font-bold"></span>
-                real-life performance of your Juggernauts roster.{" "}
+                <span className="font-bold">real-life performance</span> of your
+                Juggernauts roster.{" "}
               </li>
               <li>
-                Own the competition and <span className="font-bold"></span>win
-                BIG!
+                Own the competition and{" "}
+                <span className="font-bold">win BIG!</span>
               </li>
             </ul>
           </div>
@@ -71,7 +76,10 @@ export default function Home() {
           <Image src="/divider.svg" width={1294} height={115} alt="logo" />
         </section>
 
-        <section className="flex items-center justify-center py-16 bg-pixel bg-center bg-cover bg-no-repeat w-full h-full min-h-[479px]">
+        <section
+          id="fantasy-contests"
+          className="flex items-center justify-center py-16 bg-pixel bg-center bg-cover bg-no-repeat w-full h-full min-h-[479px]"
+        >
           <Image
             src="/fantasy-sports-side.svg"
             width={716}
@@ -93,7 +101,7 @@ export default function Home() {
               </p>
               <p>
                 Participate in the core weekly fantasy game to compete against
-                thousands of worldwide players and Run the Gauntlet. Or enter
+                thousands of players worldwide and Run the Gauntlet. Or enter
                 your Player Cards into special event games{" "}
                 <span className="font-bold">
                   completely unique to Juggernauts!
@@ -103,7 +111,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex items-center justify-center py-16  w-full h-full min-h-[479px] gap-10">
+        <section className="flex items-center justify-center py-16  w-full h-full min-h-[479px] gap-[120px]">
           <div className="flex flex-col items-center max-w-[543px] gap-8">
             <Image src="/blitz-logo.svg" width={280} height={142} alt="logo" />
 
@@ -119,14 +127,21 @@ export default function Home() {
           <Image src="/blitz-side.svg" width={646} height={377} alt="logo" />
         </section>
 
-        <section className="flex items-center justify-center py-16 bg-pixel bg-center bg-cover bg-no-repeat w-full h-full min-h-[479px] gap-14">
-          <Image src="/gauntlet-side.svg" width={485} height={293} alt="logo" />
-          <div className="flex flex-col max-w-[661px]">
+        <section className="flex items-center justify-center py-16 bg-pixel bg-center bg-cover bg-no-repeat w-full h-full min-h-[479px] gap-[120px]">
+          <Image
+            src="/gauntlet-side.svg"
+            width={485}
+            height={293}
+            alt="logo"
+            className="mt-[40px]"
+          />
+          <div className="flex flex-col max-w-[661px] gap-8">
             <Image
               src="/gauntlet-logo.svg"
               width={349}
               height={124}
               alt="logo"
+              className="ml-[-20px]"
             />
             <div>
               <p>
@@ -157,14 +172,14 @@ export default function Home() {
             Partners
           </h2>
           <div className="flex items-center justify-center w-full gap-10">
-            <Image
-              src="/chirpley-logo.svg"
-              width={163}
-              height={42}
-              alt="logo"
-            />
-            <Image src="/samurai-logo.svg" width={163} height={50} alt="logo" />
-            <Image src="/slance-logo.svg" width={183} height={34} alt="logo" />
+            {partners.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center p-4 px-8 bg-gray rounded-lg transition-transform hover:scale-105 hover:drop-shadow-lg"
+              >
+                <Image src={item} width={163} height={42} alt="logo" />
+              </div>
+            ))}
           </div>
         </section>
 
@@ -179,17 +194,26 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col items-center justify-center w-full h-[224px] bg-gradient-to-b from-white to-gray gap-10">
+        <section
+          id="contact-us"
+          className="flex flex-col items-center justify-center w-full h-[264px] bg-gradient-to-b from-white to-gray gap-10"
+        >
           <h2
             className={`font-bold text-[45px] leading-[44px] ${jersey25.className}`}
           >
             Contact Us
           </h2>
           <div className="flex items-center justify-center w-full gap-10">
-            <Image src="/twitter.svg" width={72} height={72} alt="logo" />
-            <Image src="/linkedin.svg" width={72} height={72} alt="logo" />
-            <Image src="/telegram.svg" width={72} height={72} alt="logo" />
-            <Image src="/email.svg" width={72} height={72} alt="logo" />
+            {socials.map((item, index) => (
+              <Image
+                key={index}
+                src={item}
+                width={72}
+                height={72}
+                alt="logo"
+                className="transition-all hover:scale-105 hover:drop-shadow-lg"
+              />
+            ))}
           </div>
         </section>
       </div>

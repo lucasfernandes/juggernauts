@@ -17,7 +17,7 @@ export default function Nav() {
         className="hidden lg:flex w-full max-w-[1920px] h-[84px] bg-white bg-pixel bg-contain bg-center"
       >
         <div className="flex justify-center items-center w-full gap-[50px]">
-          <Link href="/" className="hover:opacity-75">
+          <Link href="/" className="hover:opacity-75 mr-16">
             <Image
               src="/header-logo.svg"
               width={310}
@@ -25,19 +25,25 @@ export default function Nav() {
               placeholder="blur"
               blurDataURL="/logo.svg"
               alt="logo"
-              className="pr-14"
             />
           </Link>
-          <div className="text-[#18191F] flex items-center md:gap-6 2xl:gap-10 font-light md:text-[16px]">
+          <div className="text-[#18191F] flex items-center text-center md:gap-6 2xl:gap-10 font-light md:text-[16px]">
             {routes.map((item, index) => (
               <Link
                 key={index}
                 href={item.href}
-                className={`transition-all hover:border-b-[5px] border-green pb-1 ${
+                className={`transition-all ${
+                  item.title !== "Whitepaper" && "hover:border-b-[5px]"
+                } border-green pb-1 relative ${
                   item.href === page.href && "border-b-[5px]"
                 } `}
               >
                 {item.title}
+                {item.title === "Whitepaper" && (
+                  <div className="absolute top-4 w-full text-center text-[10px] font-light text-black">
+                    (Coming Soon)
+                  </div>
+                )}
               </Link>
             ))}
           </div>
@@ -49,7 +55,7 @@ export default function Nav() {
         </div>
       </main>
       {/* MOBILE */}
-      <main className="flex flex-col hidden w-full bg-nav bg-no-repeat bg-cover relative z-20">
+      {/* <main className="flex flex-col hidden w-full bg-nav bg-no-repeat bg-cover relative z-20">
         <div
           className={`flex items-center justify-between w-full pt-[25px] px-[20px]`}
         >
@@ -125,7 +131,7 @@ export default function Nav() {
         </Transition>
 
         <div className="border-b border-jugz/40 pt-5 border-green-fss" />
-      </main>
+      </main> */}
     </>
   );
 }
