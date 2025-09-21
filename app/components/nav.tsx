@@ -47,39 +47,33 @@ export default function Nav() {
               </Link>
             ))}
           </div>
-          <button
+          {/* <button
             className={`transition-all bg-green w-[198px] h-[49px] flex justify-center items-center rounded-lg text-white text-[20px] font-medium hover:scale-[1.02]`}
           >
             Connect Wallet
-          </button>
+          </button> */}
         </div>
       </main>
       {/* MOBILE */}
-      {/* <main className="flex flex-col hidden w-full bg-nav bg-no-repeat bg-cover relative z-20">
+      <main className="flex flex-col lg:hidden w-full relative z-20">
         <div
           className={`flex items-center justify-between w-full pt-[25px] px-[20px]`}
         >
-          <div className="min-w-[138px] max-w-[138px] sm:min-w-[168px] sm:max-w-[168px]">
-            <Link href="/" className="hover:opacity-75">
-              <Image
-                src="/logo-mobile.svg"
-                width={68}
-                height={164}
-                placeholder="blur"
-                blurDataURL="/logo-mobile.svg"
-                alt="logo"
-              />
-            </Link>
-          </div>
+          <Link href="/" className="hover:opacity-75 mr-16">
+            <Image
+              src="/header-logo.svg"
+              width={310}
+              height={69}
+              placeholder="blur"
+              blurDataURL="/logo.svg"
+              alt="logo"
+            />
+          </Link>
 
           <div className="flex gap-2 sm:gap-4 items-center">
-            <button className="bg-jugz transition-all w-[100px] sm:w-[120px] h-[33px] flex justify-center items-center rounded-lg text-jugz-light text-[12px] sm:text-[14px] font-medium hover:scale-[1.02]">
-              Connect Wallet
-            </button>
-
             <button
               onClick={() => setOpen(!open)}
-              className="transition-all w-[39px] h-[33px] text-jugz p-1 px-2  rounded-lg hover:scale-[1.02]"
+              className="transition-all w-[59px] h-[53px] text-grayer p-1 px-2  rounded-lg hover:scale-[1.02]"
             >
               <svg
                 fill="none"
@@ -115,7 +109,7 @@ export default function Nav() {
                   key={index}
                   href={item.href}
                   className={`
-                    transition-all font-light text-[16px] text-jugz-light bg-jugz p-4 bg-opacity-90 hover:bg-opacity-60 hover:text-jugz-light hover:border-l-[6px] hover:border-white border-purple-betz rounded-lg shadow-md                     
+                    transition-all font-light text-[16px] text-gray bg-grayer p-4 bg-opacity-90 hover:bg-opacity-60 hover:text-white hover:border-l-[6px] hover:border-white rounded-lg shadow-md                     
                     ${
                       item.href === page.href &&
                       "border-l-[6px] hover:text-jugz-light hover:border-white"
@@ -131,7 +125,7 @@ export default function Nav() {
         </Transition>
 
         <div className="border-b border-jugz/40 pt-5 border-green-fss" />
-      </main> */}
+      </main>
     </>
   );
 }
