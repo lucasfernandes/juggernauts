@@ -35,7 +35,9 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <h2 className="text-lg font-bold">Docs</h2>
           <div className="flex flex-col gap-2 text-gray">
-            <Link href="#">Medium</Link>
+            <Link target="blank" href="https://medium.com/juggernauts-sports">
+              Medium
+            </Link>
             <Link href="#">Whitepaper</Link>
             <Link href="#">Pitch Deck</Link>
           </div>

@@ -36,6 +36,7 @@ const config: Config = {
 
         pixel: "url('/bg-pixel.png')",
         hero: "url('/hero.png')",
+        partners: "url('/bg-partners.svg')",
       },
     },
   },

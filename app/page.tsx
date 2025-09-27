@@ -172,11 +172,11 @@ export default function Home() {
           >
             Partners
           </h2>
-          <div className="flex items-center justify-center w-full gap-10">
+          <div className="flex items-center justify-center w-[965px] h-[82px] bg-partners bg-no-repeat gap-14">
             {partners.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center p-4 px-8 bg-gray rounded-lg transition-transform hover:scale-105 hover:drop-shadow-lg"
+                className="flex items-center justify-center transition-transform hover:scale-105 hover:drop-shadow-lg"
               >
                 <Image src={item} width={163} height={42} alt="logo" />
               </div>

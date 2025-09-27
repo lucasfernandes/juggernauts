@@ -20,7 +20,15 @@ export const socials = [
     src: "/twitter.svg",
     href: "https://x.com/0xJuggernauts",
   },
-  { title: "Linkedin", src: "/linkedin.svg", href: "#" },
-  { title: "Telegram", src: "/telegram.svg", href: "#" },
+  {
+    title: "Linkedin",
+    src: "/linkedin.svg",
+    href: "https://www.linkedin.com/company/juggernautssports",
+  },
+  {
+    title: "Telegram",
+    src: "/telegram.svg",
+    href: "https://t.me/JuggernautsSports",
+  },
   { title: "Email", src: "/email.svg", href: "#" },
 ];
