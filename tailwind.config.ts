@@ -36,7 +36,10 @@ const config: Config = {
 
         pixel: "url('/bg-pixel.png')",
         hero: "url('/hero.png')",
+        "hero-mobile": "url('/hero-mobile.svg')",
         partners: "url('/bg-partners.svg')",
+        pixels: "url('/pixels.svg')",
+        "pixels-gray": "url('/pixels-gray.svg')",
       },
     },
   },

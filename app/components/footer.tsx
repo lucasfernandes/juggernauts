@@ -5,8 +5,7 @@ import { socials } from "@/consts";
 export default function Footer() {
   return (
     <>
-      {/* DESKTOP */}
-      <footer className="flex justify-center w-full pt-[70px] min-h-[324px] bg-black text-xs gap-[160px] text-white">
+      <footer className="flex justify-center w-full pt-[70px] min-h-[244px] xl:min-h-[324px] bg-black text-[10px] leading-3 xl:text-xs gap-6 xl:gap-[160px] text-white">
         <div className="flex flex-col text-sm gap-6">
           <Image
             src="/header-logo.svg"
@@ -15,9 +14,16 @@ export default function Footer() {
             placeholder="blur"
             blurDataURL="/logo.svg"
             alt="logo"
-            className="mt-[-20px] ml-[-10px]"
+            className="mt-[-10px] xl:mt-[-20px] ml-[-10px] w-[180px] xl:w-[310px]"
           />
-          <div className="flex flex-col gap-2">
+          <div className="flex xl:hidden flex-col gap-2 mt-[-12px]">
+            <p>
+              Copyright 2025 © <br />
+              Juggernauts Fantasy Sports.
+            </p>
+            <p>All rights reserved. </p>
+          </div>
+          <div className="hidden xl:flex flex-col gap-2">
             <p>Copyright 2025 © Juggernauts Fantasy Sports.</p>
             <p>All rights reserved. </p>
           </div>
@@ -42,7 +48,7 @@ export default function Footer() {
             <Link href="#">Pitch Deck</Link>
           </div>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="hidden xl:flex flex-col gap-4">
           <h2 className="text-lg font-bold">Never miss an update</h2>
           <div className="flex relative w-[255px] h-[40px]">
             <input

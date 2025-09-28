@@ -56,29 +56,16 @@ export default function Nav() {
       </main>
       {/* MOBILE */}
       <main className="flex flex-col lg:hidden w-full relative z-20">
-        <div
-          className={`flex items-center justify-between w-full pt-[25px] px-[20px]`}
-        >
-          <Link href="/" className="hover:opacity-75 mr-16">
-            <Image
-              src="/header-logo.svg"
-              width={310}
-              height={69}
-              placeholder="blur"
-              blurDataURL="/logo.svg"
-              alt="logo"
-            />
-          </Link>
-
+        <div className={`flex items-center w-full pt-[25px] px-[20px]`}>
           <div className="flex gap-2 sm:gap-4 items-center">
             <button
               onClick={() => setOpen(!open)}
-              className="transition-all w-[59px] h-[53px] text-grayer p-1 px-2  rounded-lg hover:scale-[1.02]"
+              className="transition-all w-[59px] h-[53px] text-black p-1 px-2  rounded-lg hover:scale-[1.02]"
             >
               <svg
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="1.5"
+                strokeWidth="3"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
@@ -91,6 +78,17 @@ export default function Nav() {
               </svg>
             </button>
           </div>
+          <Link href="/" className="hover:opacity-75">
+            <Image
+              src="/header-logo.svg"
+              width={210}
+              height={69}
+              placeholder="blur"
+              blurDataURL="/logo.svg"
+              alt="logo"
+              className="mt-[-8px]"
+            />
+          </Link>
         </div>
         <Transition
           show={open}

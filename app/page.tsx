@@ -18,21 +18,26 @@ export default function Home() {
     >
       <div className="flex flex-col w-full">
         {/* HERO */}
-        <section className="flex flex-col items-center bg-hero w-full h-full min-h-[671px]">
+        <section className="flex flex-col items-center bg-hero-mobile bg-center xl:bg-hero bg-cover bg-no-repeat w-full h-[350px] sm:h-[500px] md:h-[671px] 2xl:h-[871px]">
           <Image
             src="/hero-text.svg"
             width={804}
             height={206}
             alt="logo"
-            className="mt-[40px]"
+            className="mt-[20px] xl:mt-[70px] w-[340px] sm:w-[500px] md:w-[700px] lg:w-[804px]"
           />
-          <div className="bg-black h-2" />
         </section>
+        <div className="w-full h-2 bg-black" />
 
         <section
           id="how-it-works"
-          className="flex items-center justify-center py-16 gap-10 bg-pixel bg-top bg-cover bg-no-repeat w-full h-full min-h-[479px]"
+          className="flex flex-col xl:flex-row items-center justify-center pt-16 xl:py-16 xl:gap-10 bg-pixel bg-top bg-cover bg-no-repeat w-full h-full min-h-[479px]"
         >
+          <h2
+            className={`block xl:hidden font-bold text-[40px] xl:text-[60px] leading-[44px] ${jersey25.className}`}
+          >
+            How It Works
+          </h2>
           <Image
             src="/how-it-works-side.svg"
             width={442}
@@ -41,29 +46,44 @@ export default function Home() {
           />
           <div className="flex flex-col gap-6">
             <h2
-              className={`font-bold text-[60px] leading-[44px] ${jersey25.className}`}
+              className={`hidden xl:block font-bold text-[60px] leading-[44px] xl:ml-[-22px] ${jersey25.className}`}
             >
               How It Works
             </h2>
-            <ul>
+            <ul className="flex flex-col items-center xl:items-start text-center xl:text-start gap-4 xl:list-decimal text-xl xl:text-2xl bg-grayer xl:bg-transparent px-10 xl:px-0 text-white xl:text-grayer py-10 xl:py-0 xl:leading-loose">
+              <li className="flex xl:hidden justify-center items-center w-8 h-8 font-bold bg-pixels bg-gray/30 bg-blend-difference text-white p-2 px-8">
+                1
+              </li>
               <li>
                 Purchase{" "}
                 <span className="font-bold">
                   Juggernauts Fantasy Player Card Packs.
                 </span>
               </li>
+              <li className="flex xl:hidden justify-center items-center w-8 h-8 font-bold bg-pixels bg-gray/30 bg-blend-difference text-white p-2 px-8">
+                2
+              </li>
               <li>
                 Build your <span className="font-bold">Juggernauts Roster</span>{" "}
                 on our peer-to-peer marketplace.
+              </li>
+              <li className="flex xl:hidden justify-center items-center w-8 h-8 font-bold bg-pixels bg-gray/30 bg-blend-difference text-white p-2 px-8">
+                3
               </li>
               <li>
                 Deploy your cards in weekly{" "}
                 <span className="font-bold">fantasy sports contests.</span>
               </li>
+              <li className="flex xl:hidden justify-center items-center w-8 h-8 font-bold bg-pixels bg-gray/30 bg-blend-difference text-white p-2 px-8">
+                4
+              </li>
               <li>
                 Score points based on the <span className="font-bold"></span>
                 <span className="font-bold">real-life performance</span> of your
                 Juggernauts roster.{" "}
+              </li>
+              <li className="flex xl:hidden justify-center items-center w-8 h-8 font-bold bg-pixels bg-gray/30 bg-blend-difference text-white p-2 px-8">
+                5
               </li>
               <li>
                 Own the competition and{" "}
@@ -73,27 +93,54 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex items-center justify-center w-full h-[140px] bg-gray">
-          <Image src="/divider.svg" width={1294} height={115} alt="logo" />
+        <section className="flex items-center justify-center w-full h-[70px] md:h-[140px] bg-gradient-to-b from-white to-gray/20 xl:from-green/80 xl:to-green/80 mt-10 xl:mt-0">
+          <Image
+            src="/divider-mobile.svg"
+            width={500}
+            height={50}
+            alt="logo"
+            className="block xl:hidden"
+          />
+          <Image
+            src="/divider.svg"
+            width={1294}
+            height={115}
+            alt="logo"
+            className="hidden xl:block"
+          />
         </section>
 
         <section
           id="fantasy-contests"
-          className="flex items-center justify-center py-16 bg-pixel bg-center bg-cover bg-no-repeat w-full h-full min-h-[479px]"
+          className="flex flex-col xl:flex-row items-center justify-center py-10 xl:py-16 bg-pixel bg-center bg-cover bg-no-repeat w-full h-full min-h-[479px]"
         >
+          <h2
+            className={`block xl:hidden text-center font-bold text-[40px] leading-[44px] px-10 ${jersey25.className}`}
+          >
+            Fantasy Sports Contests
+          </h2>
           <Image
             src="/fantasy-sports-side.svg"
             width={716}
             height={403}
             alt="logo"
+            className="hidden xl:block"
           />
-          <div className="flex flex-col max-w-[661px] gap-6">
+          <div className="flex flex-col w-full xl:max-w-[661px] gap-6">
             <h2
-              className={`font-bold text-[60px] leading-[44px] ${jersey25.className}`}
+              className={`hidden xl:block font-bold text-[60px] leading-[44px] ${jersey25.className}`}
             >
               Fantasy Sports Contests
             </h2>
-            <div className="flex flex-col gap-10">
+
+            <Image
+              src="/fantasy-sports-side.svg"
+              width={716}
+              height={403}
+              alt="logo"
+              className="block xl:hidden mt-5"
+            />
+            <div className="flex flex-col gap-10 text-lg xl:text-2xl text-center xl:text-start bg-grayer xl:bg-transparent px-10 xl:px-0 text-white xl:text-grayer py-8 xl:py-0">
               <p>
                 In the Juggernauts SportsFi ecosystem, you maintain true
                 ownership over all of your game assets; every player on your
@@ -112,11 +159,17 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex items-center justify-center py-16  w-full h-full min-h-[479px] gap-[120px]">
-          <div className="flex flex-col items-center max-w-[543px] gap-8">
-            <Image src="/blitz-logo.svg" width={280} height={142} alt="logo" />
+        <section className="flex flex-col xl:flex-row items-center justify-center xl:py-16 w-full h-full xl:min-h-[479px] gap-10 xl:gap-[120px]">
+          <div className="flex flex-col text-center xl:text-start items-center w-full xl:max-w-[543px] gap-8">
+            <Image
+              src="/blitz-logo.svg"
+              width={280}
+              height={142}
+              alt="logo"
+              className="w-[200px] xl:w-[280px]"
+            />
 
-            <p>
+            <p className="text-2xl leading-relaxed xl:leading-normal px-8 xl:px-0">
               Deploy your Juggernauts Fantasy Player Cards into unique mini
               games every week. Each and every{" "}
               <span className="font-bold">Blitz Mini Game</span> presents a
@@ -125,16 +178,24 @@ export default function Home() {
             </p>
           </div>
 
-          <Image src="/blitz-side.svg" width={646} height={377} alt="logo" />
+          <Image src="/blitz-side.svg" width={746} height={377} alt="logo" />
         </section>
 
-        <section className="flex items-center justify-center py-16 bg-pixel bg-center bg-cover bg-no-repeat w-full h-full min-h-[479px] gap-[120px]">
+        <section className="flex flex-col xl:flex-row items-center justify-center py-16 bg-pixel bg-center bg-cover bg-no-repeat w-full h-full min-h-[479px] gap-10 xl:gap-[120px]">
+          <Image
+            src="/gauntlet-logo.svg"
+            width={349}
+            height={124}
+            alt="logo"
+            className="block xl:hidden w-[309px] xl:w-[349px]"
+          />
+
           <Image
             src="/gauntlet-side.svg"
-            width={485}
+            width={585}
             height={293}
             alt="logo"
-            className="mt-[40px]"
+            className="xl:mt-[40px]"
           />
           <div className="flex flex-col max-w-[661px] gap-8">
             <Image
@@ -142,9 +203,9 @@ export default function Home() {
               width={349}
               height={124}
               alt="logo"
-              className="ml-[-20px]"
+              className="ml-[-20px] hidden xl:block"
             />
-            <div>
+            <div className="flex flex-col text-2xl gap-10 leading-relaxed px-8 xl:px-0 text-center xl:text-start">
               <p>
                 <span className="font-bold">The Gauntlet</span> is our
                 season-long flagship game mode: a tense battle for survival with
@@ -162,21 +223,34 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex items-center justify-center w-full h-[140px] bg-gray">
-          <Image src="/divider.svg" width={1294} height={115} alt="logo" />
+        <section className="flex items-center justify-center w-full h-[70px] md:h-[140px] bg-green/80">
+          <Image
+            src="/divider-mobile.svg"
+            width={500}
+            height={50}
+            alt="logo"
+            className="block xl:hidden"
+          />
+          <Image
+            src="/divider.svg"
+            width={1294}
+            height={115}
+            alt="logo"
+            className="hidden xl:block"
+          />
         </section>
 
-        <section className="flex flex-col items-center justify-center w-full h-[203px] bg-gradient-to-b from-gray to-white  gap-10">
+        <section className="flex flex-col items-center justify-center w-full bg-gradient-to-b from-gray to-white gap-10">
           <h2
-            className={`font-bold text-[45px] leading-[44px] ${jersey25.className}`}
+            className={`font-bold text-[40px] xl:text-[45px] leading-[44px] mt-20 ${jersey25.className}`}
           >
             Partners
           </h2>
-          <div className="flex items-center justify-center w-[965px] h-[82px] bg-partners bg-no-repeat gap-14">
+          <div className="flex flex-col xl:flex-row items-center justify-center w-full xl:h-[120px] gap-10 xl:gap-5">
             {partners.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center transition-transform hover:scale-105 hover:drop-shadow-lg"
+                className="flex items-center justify-center bg-pixels-gray bg-cover py-3 xl:p-6 w-[340px] xl:w-[300px] transition-transform hover:scale-105 hover:drop-shadow-lg"
               >
                 <Image src={item} width={163} height={42} alt="logo" />
               </div>
@@ -184,9 +258,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col items-center justify-center w-full h-[433px] bg-white gap-10 mt-14">
+        <section className="flex flex-col items-center justify-center w-full xl:h-[433px] bg-gray xl:gap-10 mt-24 py-10 xl:py-0">
           <h2
-            className={`font-bold text-[60px] mb-[-130px] leading-[44px] ${jersey25.className}`}
+            className={`font-bold text-center xl:text-start text-[40px] xl:text-[60px] xl:mb-[-130px] leading-[44px] ${jersey25.className}`}
           >
             The Juggernauts Team
           </h2>
@@ -197,10 +271,10 @@ export default function Home() {
 
         <section
           id="contact-us"
-          className="flex flex-col items-center justify-center w-full h-[264px] bg-gradient-to-b from-white to-gray gap-10"
+          className="flex flex-col items-center justify-center w-full xl:h-[264px] bg-gradient-to-b from-white to-gray gap-10  py-10 xl:py-0"
         >
           <h2
-            className={`font-bold text-[45px] leading-[44px] ${jersey25.className}`}
+            className={`font-bold text-[40px] leading-[44px] ${jersey25.className}`}
           >
             Contact Us
           </h2>
@@ -212,7 +286,7 @@ export default function Home() {
                   width={72}
                   height={72}
                   alt="logo"
-                  className="transition-all hover:scale-105 hover:drop-shadow-lg"
+                  className="transition-all hover:scale-105 hover:drop-shadow-lg w-[52px] xl:w-[72px]"
                 />
               </Link>
             ))}
