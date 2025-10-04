@@ -46,9 +46,10 @@ export default function Home() {
           /> */}
           <div className="flex flex-col gap-4 text-lg pt-5 px-5">
             <div className="flex flex-col justify-center gap-6 bg-gray/40 rounded-lg h-30 p-5 border border-white shadow-md">
-              <h2 className="text-xl text-emerald-700 font-normal">Purchase</h2>
+              <h2 className="text-xl text-emerald-700 font-semibold uppercase">
+                Purchase
+              </h2>
               <div className="leading-tight text-lg">
-                Purchase{" "}
                 <span className="text-grayer/80 font-medium">
                   Juggernauts Fantasy Player Card Packs.
                 </span>
@@ -56,9 +57,11 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col justify-center gap-6 bg-gray/40 rounded-lg h-30 p-5 border border-white shadow-md">
-              <h2 className="text-xl text-emerald-700 font-normal">Build</h2>
+              <h2 className="text-xl text-emerald-700 font-semibold uppercase">
+                Build
+              </h2>
               <div className="leading-tight text-lg">
-                Build your{" "}
+                your{" "}
                 <span className="text-grayer/80 font-medium">
                   Juggernauts Roster
                 </span>{" "}
@@ -66,18 +69,22 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col justify-center gap-6 bg-gray/40 rounded-lg h-30 p-5 border border-white shadow-md">
-              <h2 className="text-xl text-emerald-700 font-normal">Deploy</h2>
+              <h2 className="text-xl text-emerald-700 font-semibold uppercase">
+                Deploy
+              </h2>
               <div className="leading-tight text-lg">
-                Deploy your cards in weekly{" "}
+                Your cards in weekly{" "}
                 <span className="text-grayer/80 font-medium">
                   fantasy sports contests.
                 </span>
               </div>
             </div>
             <div className="flex flex-col justify-center gap-6 bg-gray/40 rounded-lg h-30 p-5 border border-white shadow-md">
-              <h2 className="text-xl text-emerald-700 font-normal">Score</h2>
+              <h2 className="text-xl text-emerald-700 font-semibold uppercase">
+                Score
+              </h2>
               <div className="leading-tight text-lg">
-                Score points based on the{" "}
+                Points based on the{" "}
                 <span className="text-grayer/80 font-medium">
                   real-divfe performance
                 </span>{" "}
@@ -85,9 +92,11 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col justify-center gap-6 bg-gray/40 rounded-lg h-30 p-5 border border-white shadow-md">
-              <h2 className="text-xl text-emerald-700 font-normal">Own</h2>
+              <h2 className="text-xl text-emerald-700 font-semibold uppercase">
+                Own
+              </h2>
               <div className="leading-tight text-lg">
-                Own the competition and{" "}
+                The competition and{" "}
                 <span className="text-grayer/80 font-medium">win BIG!</span>
               </div>
             </div>
@@ -206,10 +215,13 @@ export default function Home() {
             /> */}
             <div className="flex xl:hidden flex-col justify-center self-center  bg-gray/40 rounded-lg min-h-30 max-w-[93%] border border-white shadow-md mt-5">
               <p className="p-5">
-                In the Juggernauts SportsFi ecosystem, you maintain true
-                ownership over all of your game assets; every player on your
-                roster is yours to collect, trade, and enter into high-stakes
-                fantasy games.
+                In the{" "}
+                <span className="font-bold">
+                  Juggernauts SportsFi ecosystem
+                </span>
+                , you maintain true ownership over all of your game assets;
+                every player on your roster is yours to collect, trade, and
+                enter into high-stakes fantasy games.
               </p>
               <p className="p-5 bg-grayer/70 text-white rounded-b-lg border-t-2">
                 Participate in the core weekly fantasy game to compete against
