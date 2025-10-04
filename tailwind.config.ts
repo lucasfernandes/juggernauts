@@ -11,6 +11,12 @@ const config: Config = {
       colors: {
         jugz: "#3354C5",
         "jugz-light": "#C9DAF8",
+
+        green: "#004C54",
+        red: "#E31837",
+        blue: "#001A40",
+        gray: "#D0D0D0",
+        grayer: "#4D4D4D",
       },
       dropShadow: {
         black: "2px 5px 0px rgba(0, 0, 0, 1)",
@@ -27,6 +33,13 @@ const config: Config = {
         fss: "url('/fss.png')",
         sb: "url('/sb.png')",
         ss: "url('/ss.png')",
+
+        pixel: "url('/bg-pixel.png')",
+        hero: "url('/hero.png')",
+        "hero-mobile": "url('/hero-mobile.svg')",
+        partners: "url('/bg-partners.svg')",
+        pixels: "url('/pixels.svg')",
+        "pixels-gray": "url('/pixels-gray.svg')",
       },
     },
   },

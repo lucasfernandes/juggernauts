@@ -1,457 +1,414 @@
 "use client";
 import Image from "next/image";
 import localFont from "next/font/local";
-import Link from "next/link";
 import { useState } from "react";
-import { Transition } from "@headlessui/react";
+import { partners, socials } from "@/consts";
+import Link from "next/link";
 
-// Font files can be colocated inside of `app`
-const pixeBoy = localFont({
-  src: "./Pixeboy.woff2",
+const jersey25 = localFont({
+  src: "./Jersey25-Regular.woff2",
   display: "swap",
 });
 
-const prognosticators = [
-  "Create your SocialBetz Zone ",
-  "Post your sports bets, sports betting strategies, and related content ",
-  "Achieve a high betting win rate ",
-  "Gain a following",
-  "Earn crypto rewards",
-];
-
-const bettors = [
-  "Create a SocialBetz Account",
-  "Choose a SocialBetz Zone subscription level",
-  "Follow top Social Prognosticator's SocialBetz Zones",
-  "Copy bet top Social Prognosticators directly on site",
-  "Achieve an amazing sports betting win rate ",
-];
-
-const team = [
-  {
-    image: "/logo-head-orange.svg",
-    name: "Paul Osmond",
-    label: "CEO",
-    description:
-      "A serial entrepreneur with a love for family, sports, and crypto. Paul has worked in leadership positions for a number of blockchain projects and has advised many successful startups throughout the token and product launch cycles.",
-    social: "https://www.linkedin.com/in/paul-osmond-53381b179/",
-  },
-  {
-    image: "/logo-head.svg",
-    name: "Lucas Silveira",
-    label: "CTO",
-    description:
-      "Lucas brings 16+ years of development experience to the table with 2+ years developing blockchain-based solutions for the most innovative platforms in the Web3 space. Lucas relishes the opportunity to be an agent of change for processes and people.",
-    social: "https://www.linkedin.com/in/lfsilveira/",
-  },
-  {
-    image: "/logo-head-red.svg",
-    name: "Slance",
-    label: " Creative Growth Partner",
-    description:
-      "Slance helps crypto & blockchain teams become niche authorities with visual storytelling, identifying growth areas, and fitting creatives plans into the overall marketing strategy.",
-    social: "https://www.linkedin.com/company/slance-co/",
-  },
-];
-
 export default function Home() {
-  const [fss, setFss] = useState(false);
-  const [sb, setSb] = useState(false);
-  const [ss, setSs] = useState(false);
-
   return (
-    <main id="main" className="flex flex-col w-full max-w-[1920px] relative">
-      {/* TOP BANNER */}
-      <section className="flex flex-col py-16 gap-10 xl:gap-0 relative">
-        <div className="flex justify-center sm:justify-start items-center xl:py-[70px] px-[26px] xl:px-[100px] gap-4 xl:gap-20">
+    <main
+      id="main"
+      className="flex flex-col justify-center items-center w-full bg-white text-[18px]"
+    >
+      <div className="flex flex-col w-full">
+        {/* HERO */}
+        <section className="flex flex-col items-center bg-hero-mobile bg-center xl:bg-hero bg-cover bg-no-repeat w-full h-[350px] sm:h-[500px] md:h-[671px] 2xl:h-[871px]">
           <Image
-            src="/logo-head.svg"
-            width={118}
-            height={113}
-            placeholder="blur"
-            blurDataURL="/logo-head.svg"
+            src="/hero-text.svg"
+            width={804}
+            height={206}
             alt="logo"
-            className="xl:hidden absolute bottom-0 right-0"
+            className="mt-[20px] xl:mt-[70px] w-[340px] sm:w-[500px] md:w-[700px] lg:w-[804px]"
           />
-          <Image
-            src="/logo-head.svg"
-            width={448}
-            height={443}
-            placeholder="blur"
-            blurDataURL="/logo-head.svg"
-            alt="logo"
-            className="hidden xl:block xl:w-[288px] 2xl:w-[448px] transition-all hover:scale-[1.03] hover:-rotate-[360deg]"
-          />
+        </section>
+        <div className="w-full h-2 bg-black" />
 
-          <div className="flex flex-col text-white z-10 max-w-[920px]">
-            <div className="flex flex-col gap-2 font-bold text-[50px] xl:text-[140px] leading-[46px] xl:leading-[110px]">
-              <p
-                className={`text-white drop-shadow-black  ${pixeBoy.className}`}
-              >
-                JUGGERNAUTS
-              </p>
-              <p
-                className={`font-medium text-[26px] xl:text-[32px] leading-[35px] xl:leading-[40px] 2xl:leading-[45px] text-jugz-light drop-shadow-black`}
-              >
-                Building badass <span className="text-jugz-light">SportFi</span>{" "}
-                dApps.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* WHATS IS SPORTIFI */}
-      <section
-        id="sportifi"
-        className="bg-black bg-jugz6 bg-no-repeat bg-cover bg-right"
-      >
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
-          <Image
-            src="/section-arrows-light.svg"
-            width={180}
-            height={180}
-            placeholder="blur"
-            blurDataURL="/section-arrows.svg"
-            alt="game modes"
-            className="w-[100px] xl:w-[180px] absolute left-[-40px] xl:left-[-50px] top-6 xl:top-8 drop-shadow-black"
-          />
-          <p
-            className={`text-white pl-16 drop-shadow-black ${pixeBoy.className}`}
-          >
-            What is SportFi?
-          </p>
-        </div>
-        <div className="flex flex-col  gap-16 text-jugz-light xl:pb-24">
-          <div className="flex justify-between items-center xl:px-[80px] xl:mt-16 relative">
-            <div className="flex flex-col gap-16 w-full px-[22px] xl:px-0 pt-10 pb-10 z-10 drop-shadow-black">
-              <p
-                className={`flex text-[24px] xl:text-[30px] xl:leading-[46px] border-2 rounded-[15px] p-10 max-w-[700px] bg-black/70 backdrop-blur-md`}
-              >
-                SportFi is the intertwining of real world pro sports and
-                decentralized finance that allows for the creation of novel
-                decentralized applications built on the blockchain.
-              </p>
-              <p
-                className={`flex text-[24px] xl:text-[30px] xl:leading-[46px] border-2 rounded-[15px] p-10 max-w-[700px] self-end bg-black/70 backdrop-blur-md`}
-              >
-                Utilizing smart contracts, non fungible tokens, and crypto,
-                SportFi enhances the fan engagement experience and creates new
-                ways for sports fans to follow their favorite athletes and enjoy
-                their favorite sports.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FULLSET SPORTS */}
-      <section id="ecosystem">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
-          <Image
-            src="/section-arrows-light.svg"
-            width={180}
-            height={180}
-            placeholder="blur"
-            blurDataURL="/section-arrows.svg"
-            alt="game modes"
-            className="w-[100px] xl:w-[180px] absolute left-[-40px] xl:left-[-50px] top-6 xl:top-8 drop-shadow-black"
-          />
-          <p
-            className={`text-white pl-16 drop-shadow-black ${pixeBoy.className}`}
-          >
-            FullSet Sports
-          </p>
-        </div>
-        <div className="flex flex-col gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] md:h-[400px] md:max-h-[400px] xl:h-[700px] xl:max-h-[700px] overflow-hidden">
-          <button className="w-full h-full" onMouseEnter={() => setFss(true)}>
-            <Image
-              src="/fss.png"
-              placeholder="blur"
-              blurDataURL="/fss.png"
-              alt="game modes"
-              fill
-              className="absolute w-full h-full"
-            />
-          </button>
-          <Transition
-            show={fss}
-            enter="transition-opacity duration-150"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition-opacity duration-150"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-            onMouseLeave={() => setFss(false)}
-          >
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-900 to-blue-900/80 flex items-center justify-center">
-              <Link
-                href="https://fullsetsports.com"
-                target="blank"
-                className={`transition-all bg-white border border-blue-400 w-[198px] h-[49px] flex justify-center items-center rounded-lg text-jugz text-[20px] font-medium hover:scale-[1.02] hover:drop-shadow-light ${pixeBoy.className}`}
-              >
-                Learn more
-              </Link>
-            </div>
-          </Transition>
-        </div>
-      </section>
-
-      {/* SOCIAL BETZ */}
-      <section>
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
-          <Image
-            src="/section-arrows-light.svg"
-            width={180}
-            height={180}
-            placeholder="blur"
-            blurDataURL="/section-arrows.svg"
-            alt="arrow"
-            className="w-[100px] xl:w-[180px] absolute left-[-40px] xl:left-[-50px] top-6 xl:top-8 drop-shadow-black"
-          />
-          <p
-            className={`text-white pl-16 drop-shadow-black ${pixeBoy.className}`}
-          >
-            Socialbetz
-          </p>
-        </div>
-        <div className="flex flex-col gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] md:h-[400px] md:max-h-[400px]  lg:h-[600px] lg:max-h-[600px] xl:h-[700px] xl:max-h-[700px]">
-          <button className="w-full h-full">
-            <Image
-              src="/sb.png"
-              placeholder="blur"
-              blurDataURL="/sb.png"
-              alt="SocialBetz"
-              fill
-              className="absolute w-full h-full"
-            />
-          </button>
-          <Transition
-            show={sb}
-            enter="transition-opacity duration-150"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition-opacity duration-150"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-            // onMouseLeave={() => setSb(false)}
-          >
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-900 to-blue-900/80 flex items-center justify-center">
-              <Link
-                href="https://socialbetz.vercel.app/"
-                target="blank"
-                className={`transition-all bg-white border border-blue-400 w-[198px] h-[49px] flex justify-center items-center rounded-lg text-jugz text-[20px] font-medium hover:scale-[1.02] hover:drop-shadow-light ${pixeBoy.className}`}
-              >
-                Learn more
-              </Link>
-            </div>
-          </Transition>
-        </div>
-      </section>
-
-      {/* SPORT STUFF */}
-      <section className="z-20">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
-          <Image
-            src="/section-arrows-light.svg"
-            width={180}
-            height={180}
-            placeholder="blur"
-            blurDataURL="/section-arrows.svg"
-            alt="arrow"
-            className="w-[100px] xl:w-[180px] absolute left-[-40px] xl:left-[-50px] top-6 xl:top-8 drop-shadow-black"
-          />
-          <p
-            className={`text-white pl-16 drop-shadow-black ${pixeBoy.className}`}
-          >
-            SPORTSTUFF
-          </p>
-        </div>
-        <div className="flex flex-col  gap-16 text-white xl:pb-24 relative w-full h-[250px] max-h-[250px] md:h-[400px] md:max-h-[400px]  lg:h-[600px] lg:max-h-[600px] xl:h-[700px] xl:max-h-[700px]">
-          <button className="w-full h-full">
-            <Image
-              src="/ss.png"
-              placeholder="blur"
-              blurDataURL="/ss.png"
-              alt="SportStuff"
-              fill
-              className="absolute w-full h-full"
-            />
-          </button>
-          <Transition
-            show={ss}
-            enter="transition-opacity duration-150"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition-opacity duration-150"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-            // onMouseLeave={() => setSs(false)}
-          >
-            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-900 to-blue-900/80 flex items-center justify-center">
-              <Link
-                href="#"
-                className={`transition-all bg-white border border-blue-400 w-[198px] h-[49px] flex justify-center items-center rounded-lg text-jugz text-[20px] font-medium hover:scale-[1.02] hover:drop-shadow-light ${pixeBoy.className}`}
-              >
-                Learn more
-              </Link>
-            </div>
-          </Transition>
-        </div>
-      </section>
-
-      {/* JUG TOKEN */}
-      <section
-        id="jugz"
-        className="bg-black bg-jugz5 xl:bg-numbers bg-no-repeat bg-center pb-16"
-      >
-        <div className="flex flex-col  gap-16 text-white xl:pb-24">
-          <div className="flex justify-between items-center xl:px-[100px] xl:mt-16 relative">
-            <div className="flex flex-col xl:gap-14 w-full xl:max-w-[1000px] px-[22px] xl:px-0 pt-10 pb-10 z-10">
-              <p
-                className={`text-[74px] xl:text-[134px] xl:leading-[46px] drop-shadow-black ${pixeBoy.className}`}
-              >
-                $JUG TOKEN
-              </p>
-              <p
-                className={`text-[24px] xl:text-[34px] xl:leading-[46px] max-w-[800px] text-jugz-light drop-shadow-black`}
-              >
-                The $JUG token is the medium of exchange for all products and
-                services within the juggernauts SportFi ecosystem.
-              </p>
-            </div>
-            <Image
-              src="/coins.svg"
-              width={180}
-              height={180}
-              placeholder="blur"
-              blurDataURL="/coins.svg"
-              alt="coins"
-              className="
-                w-[240px] absolute right-0 bottom-[-30px] z-0 transition-all hover:scale-[1.03] hover:right-10 duration-300
-                xl:w-[680px] xl:right-0 xl:top-[-130px] opacity-30 xl:opacity-100
-
-              "
-            />
-          </div>
-          {/* <div className="flex items-center gap-16 xl:px-[100px]">
-            <div className="flex flex-col bg-black/70 border border-jugz-light rounded-[8px] p-5 text-center min-w-[300px] max-w-[300px] transition-all hover:scale-[1.03] hover:drop-shadow-light">
-              <p className={`text-6xl text-white ${pixeBoy.className}`}>
-                1B $JUG
-              </p>
-              <p className="text-[16px] text-jugz-light">Total Supply</p>
-            </div>
-            <div className="flex flex-col bg-black/70 border border-jugz-light rounded-[8px] p-5 text-center min-w-[300px] max-w-[300px] transition-all hover:scale-[1.03] hover:drop-shadow-light">
-              <p className={`text-6xl text-white ${pixeBoy.className}`}>
-                $15M USD
-              </p>
-              <p className="text-[16px] text-jugz-light">
-                Fully-dilluted Valuation
-              </p>
-            </div>
-            <div className="flex flex-col bg-black/70 border border-jugz-light rounded-[8px] p-5 text-center min-w-[300px] max-w-[300px] transition-all hover:scale-[1.03] hover:drop-shadow-light">
-              <p className={`text-6xl text-white ${pixeBoy.className}`}>
-                $450K USD
-              </p>
-              <p className="text-[16px] text-jugz-light">
-                Circulating market cap at TGE
-              </p>
-            </div>
-          </div> */}
-        </div>
-      </section>
-
-      {/* TEAM */}
-      <section id="team" className="bg-jugz4 bg-section bg-no-repeat bg-cover">
-        <div className="flex items-center gap-5 xl:gap-8 font-semibold text-[24px] xl:text-[80px] leading-[40px]  px-[26px] xl:px-[100px] py-8 xl:py-16 bg-slate-900 shadow-inner relative transition-all hover:pl-2 xl:hover:pl-20 overflow-hidden">
-          <Image
-            src="/section-arrows-light.svg"
-            width={180}
-            height={180}
-            placeholder="blur"
-            blurDataURL="/section-arrows-light.svg"
-            alt="game modes"
-            className="w-[100px] xl:w-[180px] absolute left-[-40px] xl:left-[-50px] top-6 xl:top-8 drop-shadow-black"
-          />
-          <p
-            className={`text-white pl-16 drop-shadow-black ${pixeBoy.className}`}
-          >
-            Our Team
-          </p>
-        </div>
-
-        <div className="flex gap-10 2xl:gap-24  items-center flex-wrap px-[26px] xl:px-[100px] xl:mt-16 relative py-24">
-          {team.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col justify-center items-center w-full md:w-[300px] lg:w-[350px] xl:w-[330px] 2xl:w-[400px] bg-slate-900 border border-jugz rounded transition-all hover:scale-[1.03] hover:bg-slate-800 hover:shadow-xl pt-5"
-            >
-              <Image
-                src={item.image}
-                width={200}
-                height={339}
-                placeholder="blur"
-                blurDataURL={item.image}
-                alt="social betz"
-                className="drop-shadow-xl w-[100px] xl:w-[200px]"
-              />
-              <p
-                className={`text-3xl text-white drop-shadow-black ${pixeBoy.className}`}
-              >
-                {item.name}
-              </p>
-              <div className="flex items-center gap-2 font-bold text-jugz-light  drop-shadow-black-small">
-                {item.label}
-                <Link
-                  href={item.social}
-                  className="transition-all hover:opacity-75"
-                  target="blank"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                    className="bi bi-linkedin"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                  </svg>
-                </Link>
-              </div>
-              <p
-                className={`p-6 text-justify text-jugz-light xl:leading-[32px] drop-shadow-black-small md:min-h-[280px] 2xl:min-h-[200px] ${pixeBoy.className}`}
-              >
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* BUTTON TO TOP */}
-      <Link
-        href="#top"
-        className="hidden xl:block fixed bottom-24 right-24 bg-jugz/60 p-2 rounded-lg text-jugz-light z-30 transition-all hover:scale-[1.03] hover:text-white shadow-md"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="48"
-          height="48"
-          fill="currentColor"
-          className="bi bi-chevron-double-up"
-          viewBox="0 0 16 16"
+        <section
+          id="how-it-works"
+          className="flex xl:hidden flex-col justify-center pt-14 bg-pixel bg-top bg-cover bg-no-repeat w-full h-full min-h-[479px]"
         >
-          <path
-            fillRule="evenodd"
-            d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"
+          <h2
+            className={`block xl:hidden px-5 font-bold text-[36px] leading-[44px] ${jersey25.className}`}
+          >
+            How It Works
+          </h2>
+          {/* <Image
+            src="/how-it-works-side.svg"
+            width={442}
+            height={443}
+            alt="logo"
+          /> */}
+          <div className="flex flex-col gap-4 text-lg pt-5 px-5">
+            <div className="flex flex-col justify-center gap-6 bg-gray/40 rounded-lg h-30 p-5 border border-white shadow-md">
+              <h2 className="text-xl text-emerald-700 font-semibold uppercase">
+                Purchase
+              </h2>
+              <div className="leading-tight text-lg">
+                <span className="text-grayer/80 font-medium">
+                  Juggernauts Fantasy Player Card Packs.
+                </span>
+              </div>
+            </div>
+
+            <div className="flex flex-col justify-center gap-6 bg-gray/40 rounded-lg h-30 p-5 border border-white shadow-md">
+              <h2 className="text-xl text-emerald-700 font-semibold uppercase">
+                Build
+              </h2>
+              <div className="leading-tight text-lg">
+                your{" "}
+                <span className="text-grayer/80 font-medium">
+                  Juggernauts Roster
+                </span>{" "}
+                on our peer-to-peer marketplace.
+              </div>
+            </div>
+            <div className="flex flex-col justify-center gap-6 bg-gray/40 rounded-lg h-30 p-5 border border-white shadow-md">
+              <h2 className="text-xl text-emerald-700 font-semibold uppercase">
+                Deploy
+              </h2>
+              <div className="leading-tight text-lg">
+                Your cards in weekly{" "}
+                <span className="text-grayer/80 font-medium">
+                  fantasy sports contests.
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-col justify-center gap-6 bg-gray/40 rounded-lg h-30 p-5 border border-white shadow-md">
+              <h2 className="text-xl text-emerald-700 font-semibold uppercase">
+                Score
+              </h2>
+              <div className="leading-tight text-lg">
+                Points based on the{" "}
+                <span className="text-grayer/80 font-medium">
+                  real-divfe performance
+                </span>{" "}
+                of your Juggernauts roster.{" "}
+              </div>
+            </div>
+            <div className="flex flex-col justify-center gap-6 bg-gray/40 rounded-lg h-30 p-5 border border-white shadow-md">
+              <h2 className="text-xl text-emerald-700 font-semibold uppercase">
+                Own
+              </h2>
+              <div className="leading-tight text-lg">
+                The competition and{" "}
+                <span className="text-grayer/80 font-medium">win BIG!</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          id="how-it-works"
+          className="hidden xl:flex flex-col xl:flex-row items-center justify-center pt-16 xl:py-16 xl:gap-10 bg-pixel bg-top bg-cover bg-no-repeat w-full h-full min-h-[479px]"
+        >
+          <h2
+            className={`block xl:hidden font-bold text-[40px] xl:text-[60px] leading-[44px] ${jersey25.className}`}
+          >
+            How It Works
+          </h2>
+          <Image
+            src="/how-it-works-side.svg"
+            width={442}
+            height={443}
+            alt="logo"
           />
-          <path
-            fillRule="evenodd"
-            d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"
+          <div className="flex flex-col gap-6">
+            <h2
+              className={`hidden xl:block font-bold text-[60px] leading-[44px] xl:ml-[-22px] ${jersey25.className}`}
+            >
+              How It Works
+            </h2>
+            <ul className="flex flex-col items-center xl:items-start text-center xl:text-start gap-4 xl:list-decimal text-xl xl:text-2xl bg-grayer xl:bg-transparent px-10 xl:px-0 text-white xl:text-grayer py-10 xl:py-0 xl:leading-loose">
+              <li className="flex xl:hidden justify-center items-center w-8 h-8 font-bold bg-pixels bg-gray/30 bg-blend-difference text-white p-2 px-8">
+                1
+              </li>
+              <li>
+                Purchase{" "}
+                <span className="font-bold">
+                  Juggernauts Fantasy Player Card Packs.
+                </span>
+              </li>
+              <li className="flex xl:hidden justify-center items-center w-8 h-8 font-bold bg-pixels bg-gray/30 bg-blend-difference text-white p-2 px-8">
+                2
+              </li>
+              <li>
+                Build your <span className="font-bold">Juggernauts Roster</span>{" "}
+                on our peer-to-peer marketplace.
+              </li>
+              <li className="flex xl:hidden justify-center items-center w-8 h-8 font-bold bg-pixels bg-gray/30 bg-blend-difference text-white p-2 px-8">
+                3
+              </li>
+              <li>
+                Deploy your cards in weekly{" "}
+                <span className="font-bold">fantasy sports contests.</span>
+              </li>
+              <li className="flex xl:hidden justify-center items-center w-8 h-8 font-bold bg-pixels bg-gray/30 bg-blend-difference text-white p-2 px-8">
+                4
+              </li>
+              <li>
+                Score points based on the <span className="font-bold"></span>
+                <span className="font-bold">real-life performance</span> of your
+                Juggernauts roster.{" "}
+              </li>
+              <li className="flex xl:hidden justify-center items-center w-8 h-8 font-bold bg-pixels bg-gray/30 bg-blend-difference text-white p-2 px-8">
+                5
+              </li>
+              <li>
+                Own the competition and{" "}
+                <span className="font-bold">win BIG!</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="flex items-center justify-center w-full md:h-[140px] bg-gradient-to-b from-white to-gray/20 xl:from-green/80 xl:to-green/80 mt-10 xl:mt-0">
+          <Image
+            src="/divider-mobile.svg"
+            width={500}
+            height={50}
+            alt="logo"
+            className="block xl:hidden mt-10 mb-14"
           />
-        </svg>
-      </Link>
+          <Image
+            src="/divider.svg"
+            width={1294}
+            height={115}
+            alt="logo"
+            className="hidden xl:block"
+          />
+        </section>
+
+        <section
+          id="fantasy-contests"
+          className="flex flex-col xl:flex-row xl:items-center justify-center py-10 xl:py-16 bg-pixel bg-center bg-cover bg-no-repeat w-full h-full min-h-[479px]"
+        >
+          <h2
+            className={`block xl:hidden px-5 font-bold text-[36px] leading-[44px] ${jersey25.className}`}
+          >
+            Fantasy Sports Contests
+          </h2>
+          <Image
+            src="/fantasy-sports-side.svg"
+            width={716}
+            height={403}
+            alt="logo"
+            className="hidden xl:block"
+          />
+          <div className="flex flex-col w-full xl:max-w-[661px] gap-6">
+            <h2
+              className={`hidden xl:block font-bold text-[60px] leading-[44px] ${jersey25.className}`}
+            >
+              Fantasy Sports Contests
+            </h2>
+
+            {/* <Image
+              src="/fantasy-sports-side.svg"
+              width={716}
+              height={403}
+              alt="logo"
+              className="block xl:hidden mt-5"
+            /> */}
+            <div className="flex xl:hidden flex-col justify-center self-center  bg-gray/40 rounded-lg min-h-30 max-w-[93%] border border-white shadow-md mt-5">
+              <p className="p-5">
+                In the Juggernauts SportsFi ecosystem , you maintain{" "}
+                <span className="font-bold">true ownership</span> over all of
+                your game assets; every player on your roster is yours to
+                collect, trade, and enter into high-stakes fantasy games.
+              </p>
+              <p className="p-5 bg-grayer/70 text-white rounded-b-lg border-t-2">
+                Participate in the core weekly fantasy game to compete against
+                thousands of players worldwide and Run the Gauntlet. Or enter
+                your Player Cards into special event games{" "}
+                <span className="font-bold">
+                  completely unique to Juggernauts!
+                </span>
+              </p>
+            </div>
+            <div className="hidden xl:flex flex-col gap-10 text-lg xl:text-2xl bg-grayer/60 xl:bg-transparent px-10 xl:px-0 text-white xl:text-grayer py-8 xl:py-0">
+              <p>
+                In the Juggernauts SportsFi ecosystem, you maintain true
+                ownership over all of your game assets; every player on your
+                roster is yours to collect, trade, and enter into high-stakes
+                fantasy games.
+              </p>
+              <p>
+                Participate in the core weekly fantasy game to compete against
+                thousands of players worldwide and Run the Gauntlet. Or enter
+                your Player Cards into special event games{" "}
+                <span className="font-bold">
+                  completely unique to Juggernauts!
+                </span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="flex flex-col xl:flex-row items-center justify-center py-8 xl:py-16 w-full h-full xl:min-h-[479px] gap-10 xl:gap-[120px]">
+          <div className="flex flex-col text-center xl:text-start items-center w-full xl:max-w-[543px] gap-8">
+            <Image
+              src="/blitz-logo.svg"
+              width={280}
+              height={142}
+              alt="logo"
+              className="w-[200px] xl:w-[280px]"
+            />
+
+            <p className="text-2xl leading-relaxed xl:leading-normal px-8 xl:px-0">
+              Deploy your Juggernauts Fantasy Player Cards into unique mini
+              games every week. Each and every{" "}
+              <span className="font-bold">Blitz Mini Game</span> presents a
+              completely novel, never-before-seen fantasy sports experience.
+              Beat the competition and WIN!
+            </p>
+          </div>
+
+          <Image
+            src="/blitz-side.svg"
+            width={746}
+            height={377}
+            alt="logo"
+            className="hidden xl:block"
+          />
+        </section>
+
+        <section className="flex flex-col xl:flex-row items-center justify-center py-16 bg-pixel bg-center bg-cover bg-no-repeat w-full h-full min-h-[479px] gap-10 xl:gap-[120px]">
+          <Image
+            src="/gauntlet-logo.svg"
+            width={349}
+            height={124}
+            alt="logo"
+            className="block xl:hidden w-[309px] xl:w-[349px]"
+          />
+
+          <Image
+            src="/gauntlet-side.svg"
+            width={585}
+            height={293}
+            alt="logo"
+            className="xl:mt-[40px]"
+          />
+          <div className="flex flex-col max-w-[661px] gap-8">
+            <Image
+              src="/gauntlet-logo.svg"
+              width={349}
+              height={124}
+              alt="logo"
+              className="ml-[-20px] hidden xl:block"
+            />
+            <div className="flex flex-col text-2xl gap-10 leading-relaxed px-8 xl:px-0 text-center xl:text-start">
+              <p>
+                <span className="font-bold">The Gauntlet</span> is our
+                season-long flagship game mode: a tense battle for survival with
+                the biggest rewards of all. Avoid elimination each week by
+                staying ahead of the ever-rising points cut-off.{" "}
+                <span className="font-bold">
+                  Advance further into the season and watch your prize pot grow.
+                </span>
+              </p>
+              <p>
+                Every Juggernauts Fantasy Player Pack comes with{" "}
+                <span className="font-bold">one free entry ticket!</span>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="flex items-center justify-center w-full h-[70px] md:h-[140px] bg-green/80">
+          <Image
+            src="/divider-mobile.svg"
+            width={500}
+            height={50}
+            alt="logo"
+            className="block xl:hidden"
+          />
+          <Image
+            src="/divider.svg"
+            width={1294}
+            height={115}
+            alt="logo"
+            className="hidden xl:block"
+          />
+        </section>
+
+        <section className="flex flex-col items-center justify-center w-full bg-gradient-to-b from-gray to-white gap-10">
+          <h2
+            className={`block xl:hidden self-start mt-14 px-5 font-bold text-[36px] leading-[44px] ${jersey25.className}`}
+          >
+            Partners
+          </h2>
+          <h2
+            className={`hidden xl:block font-bold text-[40px] xl:text-[45px] leading-[44px] mt-20 ${jersey25.className}`}
+          >
+            Partners
+          </h2>
+
+          <div className="flex items-center w-full xl:min-h-[120px] gap-4 xl:gap-5 overflow-x-scroll xl:justify-center pb-5 px-5">
+            {partners.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center gap-8 bg-gray rounded-lg w-[400px] h-40 p-5 border border-white shadow-md shrink-0"
+              >
+                <Image src={item} width={163} height={42} alt="logo" />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="flex flex-col items-center justify-center w-full xl:h-[433px] bg-gray bg-pixel bg-no-repeat bg-cover xl:gap-10 mt-24 py-10 xl:py-0">
+          <h2
+            className={`block xl:hidden self-start px-5 font-bold text-[36px] leading-[44px] ${jersey25.className}`}
+          >
+            The Juggernauts Team
+          </h2>
+          <h2
+            className={`hidden xl:block font-bold text-center xl:text-start text-[40px] xl:text-[60px] xl:mb-[-130px] leading-[44px] ${jersey25.className}`}
+          >
+            The Juggernauts Team
+          </h2>
+
+          <div className="flex xl:hidden w-full mt-[-100px]">
+            {/* The parent div controls the viewport size for the scroll */}
+            <div className="relative w-full overflow-x-scroll">
+              {/* Added a negative left margin (-ml-N) to shift the content left */}
+              <div className="w-[1400px] h-[500px] relative -ml-[200px]">
+                <Image src="/team.svg" fill alt="logo" />
+              </div>
+            </div>
+          </div>
+          <div className="hidden xl:flex items-center justify-center w-full">
+            <Image src="/team.svg" width={990} height={424} alt="logo" />
+          </div>
+        </section>
+
+        <section
+          id="contact-us"
+          className="flex flex-col items-center justify-center w-full xl:h-[264px] bg-gradient-to-b from-white to-gray gap-10  py-10 xl:py-0"
+        >
+          <h2
+            className={`font-bold text-[40px] leading-[44px] ${jersey25.className}`}
+          >
+            Contact Us
+          </h2>
+          <div className="flex items-center justify-center w-full gap-10">
+            {socials.map((item, index) => (
+              <Link key={index} href={item.href} target="blank">
+                <Image
+                  src={item.src}
+                  width={72}
+                  height={72}
+                  alt="logo"
+                  className="transition-all hover:scale-105 hover:drop-shadow-lg w-[52px] xl:w-[72px]"
+                />
+              </Link>
+            ))}
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
