@@ -215,13 +215,10 @@ export default function Home() {
             /> */}
             <div className="flex xl:hidden flex-col justify-center self-center  bg-gray/40 rounded-lg min-h-30 max-w-[93%] border border-white shadow-md mt-5">
               <p className="p-5">
-                In the{" "}
-                <span className="font-bold">
-                  Juggernauts SportsFi ecosystem
-                </span>
-                , you maintain true ownership over all of your game assets;
-                every player on your roster is yours to collect, trade, and
-                enter into high-stakes fantasy games.
+                In the Juggernauts SportsFi ecosystem , you maintain{" "}
+                <span className="font-bold">true ownership</span> over all of
+                your game assets; every player on your roster is yours to
+                collect, trade, and enter into high-stakes fantasy games.
               </p>
               <p className="p-5 bg-grayer/70 text-white rounded-b-lg border-t-2">
                 Participate in the core weekly fantasy game to compete against
