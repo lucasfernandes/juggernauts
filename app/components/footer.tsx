@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { socials } from "@/consts";
+import { docs, socials } from "@/consts";
 
 export default function Footer() {
   return (
@@ -32,7 +32,7 @@ export default function Footer() {
           <h2 className="text-lg font-bold">Links</h2>
           <div className="flex flex-col gap-2 text-gray">
             {socials.map((item, index) => (
-              <Link key={index} href={item.href} target="blank">
+              <Link key={index} href={item.href} target={item.target}>
                 {item.title}
               </Link>
             ))}
@@ -41,14 +41,21 @@ export default function Footer() {
         <div className="flex flex-col gap-4">
           <h2 className="text-lg font-bold">Docs</h2>
           <div className="flex flex-col gap-2 text-gray">
-            <Link target="blank" href="https://medium.com/juggernauts-sports">
-              Medium
-            </Link>
-            <Link href="#">Whitepaper</Link>
-            <Link href="#">Pitch Deck</Link>
+            {docs.map((item, index) => (
+              <Link
+                key={index}
+                target="blank"
+                href={item.href}
+                className={
+                  item.href === "#" ? "pointer-events-none cursor-default" : ""
+                }
+              >
+                {item.title}{" "}
+              </Link>
+            ))}
           </div>
         </div>
-        <div className="hidden xl:flex flex-col gap-4">
+        <div className="hidden flex-col gap-4">
           <h2 className="text-lg font-bold">Never miss an update</h2>
           <div className="flex relative w-[255px] h-[40px]">
             <input

@@ -19,16 +19,39 @@ export const socials = [
     title: "Twitter",
     src: "/twitter.svg",
     href: "https://x.com/0xJuggernauts",
+    target: "blank",
   },
   {
     title: "Linkedin",
     src: "/linkedin.svg",
     href: "https://www.linkedin.com/company/juggernautssports",
+    target: "blank",
   },
   {
     title: "Telegram",
     src: "/telegram.svg",
     href: "https://t.me/JuggernautsSports",
+    target: "blank",
   },
-  { title: "Email", src: "/email.svg", href: "#" },
+  {
+    title: "Email",
+    src: "/email.svg",
+    href: "mailto:hello@juggernauts.io",
+    target: "blank",
+  },
+];
+
+export const docs = [
+  {
+    title: "Medium",
+    href: "https://medium.com/juggernauts-sports",
+  },
+  {
+    title: "Whitepaper",
+    href: "#",
+  },
+  {
+    title: "Pitch Deck",
+    href: "#",
+  },
 ];
